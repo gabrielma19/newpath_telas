@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">NewPath</string>
+    <string name="text_initalPage">Motivação faz você começar, hábito faz você continuar! Vamos juntos, criar hábitos para uma vida integral.</string>
+    <string name="text_welcome">Bem vind@ de volta,</string>
+    <string name="text_loginPage">faça o login para continuar no NewPath :)</string>
+    <string name="forgetPassword">Esqueceu a senha?</string>
+    <string name="singUp">É nov@ aqui ? Sing Up :)</string>
+    <string name="wheelsTitle">Roda da vida</string>
+    <string name="wheelsFirstText">Antes de começar sua jornada, precisamos entender melhor o seu momento de vida, ter uma visão mais holística para te ajudar a criar um panorama pessoal.</string>
+    <string name="wheelsSecondText">A roda da vida é muito utilizada em sessões de Coaching, com ela em mãos, é possível analisar problemas, elencar prioridades e traçar planos futuros para atingir um novo equilíbrio.</string>
+    <string name="wheelsStart">Iniciar a Roda da Vida</string>
+    <string name="wheelsInf">Quer saber mais sobre a roda da vida? Tem um post muito bom lá no Blog :)</string>
+    <string name="rangeWheels">De 0 a 10 avalie as seguintes áreas da sua vida</string>
+    <string name="obsWheels">Lembre-se, não se trata de obter 10! É sobre parar e refletir: "Como estou me sentindo neste momento?". Se essa roda fosse um pneu no seu carro, como seria uma viagem? ;) A sinceridade aqui é a chave do sucesso.</string>
+    <string name="personalGrowth">Crescimento Pessoal</string>
+    <string name="career">Carreira</string>
+    <string name="business">Finanças</string>
+    <string name="health">Saúde / Atividade físicas</string>
+    <string name="social">Vida Social / Amig@s</string>
+    <string name="family">Relacionamento familiar</string>
+    <string name="affective">Relacionamento afetivo</string>
+    <string name="fun">Diversão</string>
+    <string name="collectiveConspiracy">Contribuição com o coletivo</string>
+    <string name="spirituality">Espiritualidade</string>
+</resources>
+
+
+
+
+
+
+
+
+
+
+

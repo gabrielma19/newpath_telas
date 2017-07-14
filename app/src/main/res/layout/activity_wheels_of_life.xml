@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.newpath.WheelsOfLife"
+    android:background="@color/colorBackgroundForm">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.user.newpath.WheelsOfLife"
+        android:background="@color/colorBackgroundForm">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="176dp"
+            android:layout_height="134dp"
+            app:srcCompat="@drawable/details_wheels_life"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="5dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.943" />
+
+        <ImageView
+            android:id="@+id/imgLogoSup"
+            android:layout_width="121dp"
+            android:layout_height="45dp"
+            app:srcCompat="@drawable/logo_sup_o_03"
+            android:layout_marginLeft="28dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="28dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="257dp"
+            android:layout_height="27dp"
+            android:text="@string/wheelsTitle"
+            android:textColor="@color/colorFontPrincipal"
+            android:textSize="17sp"
+            app:layout_constraintTop_toTopOf="@+id/guideline8"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            tools:layout_editor_absoluteX="61dp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="252dp"
+            android:layout_height="103dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="13dp"
+            android:text="@string/wheelsFirstText"
+            android:textColor="@color/colorFontSecondary"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="@+id/textView"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="0.578"
+            tools:layout_editor_absoluteX="66dp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="250dp"
+            android:layout_height="112dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/wheelsSecondText"
+            android:textColor="@color/colorFontSecondary"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/textView7"
+            android:layout_marginRight="0dp"
+            app:layout_constraintRight_toRightOf="@+id/textView7" />
+
+        <Button
+            android:id="@+id/btn_start_wheels"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:text="@string/wheelsStart"
+            android:background="@drawable/button_bg_radius"
+            android:textColor="@color/colorButton"
+            android:fontFamily="sans-serif"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="22dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="@+id/textView8"
+            android:layout_marginLeft="0dp"
+            app:layout_constraintLeft_toLeftOf="@+id/textView8" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="227dp"
+            android:layout_height="32dp"
+            android:text="@string/wheelsInf"
+            android:textColor="@color/colorFontSecondary"
+            android:textSize="13sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="78dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_start_wheels"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/btn_start_wheels"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="@+id/btn_start_wheels"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <android.support.constraint.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guideline8"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.26" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
