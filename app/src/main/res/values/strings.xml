@@ -22,6 +22,10 @@
     <string name="fun">Diversão</string>
     <string name="collectiveConspiracy">Contribuição com o coletivo</string>
     <string name="spirituality">Espiritualidade</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
 
 

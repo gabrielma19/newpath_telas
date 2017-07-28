@@ -7,13 +7,13 @@ import android.view.View;
 import android.widget.Button;
 
 public class LoginPage extends AppCompatActivity {
-
     Button btn_login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
+
         btn_login = (Button) findViewById(R.id.btn_login);
 
         btn_login.setOnClickListener(new View.OnClickListener() {
@@ -24,9 +24,11 @@ public class LoginPage extends AppCompatActivity {
         });
     }
 
-    public void wheelsLife(){
-        Intent intent = new Intent(this, WheelsOfLife.class);
+
+    public void  wheelsLife(){
+        Intent intent = new Intent(LoginPage.this, WheelsOfLife.class);
         startActivity(intent);
     }
+
 
 }

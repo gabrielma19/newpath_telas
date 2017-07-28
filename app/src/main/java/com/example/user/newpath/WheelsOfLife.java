@@ -7,7 +7,9 @@ import android.view.View;
 import android.widget.Button;
 
 public class WheelsOfLife extends AppCompatActivity {
- Button btn_start_wheels;
+
+    Button btn_start_wheels;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

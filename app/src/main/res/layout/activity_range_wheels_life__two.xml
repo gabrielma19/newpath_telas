@@ -131,8 +131,8 @@
 
         <SeekBar
             android:id="@+id/seekBar"
-            android:layout_width="136dp"
-            android:layout_height="21dp"
+            android:layout_width="134dp"
+            android:layout_height="33dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="29dp"
@@ -141,66 +141,73 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintLeft_toLeftOf="@+id/textView19"
             app:layout_constraintRight_toRightOf="@+id/textView19"
-            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+            app:layout_constraintTop_toBottomOf="@+id/textView19"
+            android:thumb="@drawable/custom_thumb"
+            android:progressTint="@color/colorFontPrincipal"/>
 
         <SeekBar
             android:id="@+id/seekBar3"
-            android:layout_width="136dp"
-            android:layout_height="21dp"
+            android:layout_width="134dp"
+            android:layout_height="33dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="13dp"
             android:max="10"
             android:progress="0"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="@+id/seekBar"
             app:layout_constraintRight_toRightOf="@+id/seekBar"
-            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+            app:layout_constraintTop_toBottomOf="@+id/seekBar"
+            android:thumb="@drawable/custom_thumb"
+            android:progressTint="@color/colorFontPrincipal"/>
 
         <SeekBar
             android:id="@+id/seekBar7"
-            android:layout_width="136dp"
-            android:layout_height="21dp"
+            android:layout_width="134dp"
+            android:layout_height="33dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="13dp"
             android:max="10"
             android:progress="0"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="@+id/seekBar3"
             app:layout_constraintRight_toRightOf="@+id/seekBar3"
-            app:layout_constraintTop_toBottomOf="@+id/seekBar3" />
+            app:layout_constraintTop_toBottomOf="@+id/seekBar3"
+            android:thumb="@drawable/custom_thumb"
+            android:progressTint="@color/colorFontPrincipal"/>
 
         <SeekBar
             android:id="@+id/seekBar8"
-            android:layout_width="136dp"
-            android:layout_height="21dp"
+            android:layout_width="134dp"
+            android:layout_height="33dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="13dp"
             android:max="10"
             android:progress="0"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="@+id/seekBar7"
             app:layout_constraintRight_toRightOf="@+id/seekBar7"
-            app:layout_constraintTop_toBottomOf="@+id/seekBar7" />
+            app:layout_constraintTop_toBottomOf="@+id/seekBar7"
+            android:thumb="@drawable/custom_thumb"
+            android:progressTint="@color/colorFontPrincipal"/>
 
         <SeekBar
             android:id="@+id/seekBar10"
-            android:layout_width="136dp"
-            android:layout_height="21dp"
-            android:layout_marginBottom="0dp"
+            android:layout_width="134dp"
+            android:layout_height="33dp"
             android:layout_marginLeft="0dp"
             android:layout_marginRight="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="13dp"
             android:max="10"
             android:progress="0"
-            app:layout_constraintBottom_toTopOf="@+id/button"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="@+id/seekBar8"
             app:layout_constraintRight_toRightOf="@+id/seekBar8"
             app:layout_constraintTop_toBottomOf="@+id/seekBar8"
-            app:layout_constraintVertical_bias="0.0" />
+            android:thumb="@drawable/custom_thumb"
+            android:progressTint="@color/colorFontPrincipal"/>
 
         <TextView
             android:id="@+id/textView25"
@@ -291,7 +298,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/guideline3"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.16" />
+            app:layout_constraintGuide_percent="0.11" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
