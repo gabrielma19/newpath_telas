@@ -26,6 +26,9 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="traco">___</string>
+    <string name="graph">Sua Roda da vida atual</string>
+    <string name="avaliation">Ver avaliação</string>
 </resources>
 
 
