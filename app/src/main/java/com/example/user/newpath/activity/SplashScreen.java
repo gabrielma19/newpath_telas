@@ -1,9 +1,12 @@
-package com.example.user.newpath;
+package com.example.user.newpath.activity;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.user.newpath.R;
+import com.example.user.newpath.activity.InitialPage;
 
 public class SplashScreen extends AppCompatActivity {
 

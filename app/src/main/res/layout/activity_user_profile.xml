@@ -7,7 +7,7 @@
     android:layout_width="wrap_content"
     android:layout_height="551dp"
     android:orientation="horizontal"
-    tools:context="com.example.user.newpath.UserProfile"
+    tools:context="com.example.user.newpath.fragment.UserProfile"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="8dp">
 

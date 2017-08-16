@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.newpath.WheelsOfLife"
+    tools:context="com.example.user.newpath.activity.WheelsOfLife"
     android:background="@color/colorBackgroundForm">
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.example.user.newpath.WheelsOfLife"
+        tools:context="com.example.user.newpath.activity.WheelsOfLife"
         android:background="@color/colorBackgroundForm">
 
         <ImageView

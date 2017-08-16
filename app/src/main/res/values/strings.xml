@@ -26,9 +26,34 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="traco">___</string>
     <string name="graph">Sua Roda da vida atual</string>
     <string name="avaliation">Ver avaliação</string>
+    <string name="formulario">Formulário</string>
+    <string name="nome">Nome</string>
+    <string name="sobrenome">Sobrenome</string>
+    <string name="telefone">Telefone</string>
+    <string name="email">Email</string>
+    <string name="idade">Idade</string>
+    <string name="cidade">Cidade</string>
+    <string name="roda_atual">Sua Roda da vida atual</string>
+    <string name="traco">___</string>
+    <string name="texto_1">De acordo com as avaliações das áreas da sua roda da vida, selecionamos as que merecem maior foco no momento.</string>
+    <string name="texto_2">Trabalharemos a área destacada nos próximos 3 meses :)</string>
+    <string name="btn_familiar">Relacionamento Familiar</string>
+    <string name="btn_saude">Saúde / Atividade Física</string>
+    <string name="btn_coletivo">Contribuição para o coletivo</string>
+    <string name="btn_espititualidade">Espiritualidade</string>
+    <string name="btnFinalizar">Finalizar e Enviar</string>
+    <string name="desafio_ok">Desafio concluído com sucesso!</string>
+    <string name="congratulations">Parabéns, @usuario ;D</string>
+    <string name="pontos">Seus pontos</string>
+    <string name="pontuacao">Pontuação do desafio.................</string>
+    <string name="bonus">Pontuação bônus.................</string>
+    <string name="pontuacao_face">Pontuação Facebook.................</string>
+    <string name="traco_2">-----------------------------------------</string>
+    <string name="total">Total...........................................</string>
+    <string name="button_ok">Ok</string>
+    <string name="quantidade_pontos">pts</string>
 </resources>
 
 
