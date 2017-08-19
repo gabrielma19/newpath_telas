@@ -31,7 +31,7 @@ public class ChartGraph extends AppCompatActivity {
     private void setupPieChart() {
         List<PieEntry> pieEntries = new ArrayList<>();
         for(int i = 0; i <  porcents.length; i++){
-            pieEntries.add(new PieEntry(porcents[i], category[i]));
+            pieEntries.add(new PieEntry(porcents[i]));
         }
 
         PieDataSet dataSet = new PieDataSet(pieEntries, "Roda da Vida");

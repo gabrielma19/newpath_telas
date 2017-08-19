@@ -26,6 +26,8 @@
             android:name=".fragment.UserProfile"
             android:label="@string/title_activity_main" />
         <activity android:name=".activity.SplashScreen" />
+        <activity android:name=".activity.ChallengeConclued" />
+        <activity android:name=".activity.ResultWheelsOfLife"></activity>
     </application>
 
 </manifest>
