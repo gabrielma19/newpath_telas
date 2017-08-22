@@ -3,16 +3,21 @@ package com.example.user.newpath.fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.user.newpath.R;
+import com.example.user.newpath.activity.ChallengeConclued;
 
 public class UserProfile extends AppCompatActivity {
 
     private TextView mTextMessage;
-
+    private FragmentManager fragmentManager;
+    private Fragment fragment;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -20,16 +25,18 @@ public class UserProfile extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
-                    return true;
+                    fragment = new ChallengeConclued();
+                    break;
                 case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
-                    return true;
+                    fragment = new ChallengeConclued();
+                    break;
                 case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
-                    return true;
+                    fragment = new ChallengeConclued();
+                    break;
             }
-            return false;
+            final FragmentTransaction transaction = fragmentManager.beginTransaction();
+            transaction.replace(R.id.content, fragment).commit();
+            return true;
         }
 
     };
@@ -41,6 +48,7 @@ public class UserProfile extends AppCompatActivity {
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        fragmentManager = getSupportFragmentManager();
     }
 
 }
