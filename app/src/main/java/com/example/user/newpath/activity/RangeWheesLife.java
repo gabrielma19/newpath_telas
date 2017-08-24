@@ -13,7 +13,6 @@ import com.example.user.newpath.model.Itens;
 
 public class RangeWheesLife extends AppCompatActivity {
 
-    private Itens itens;
 
     private TextView txt_pessoal;
     private TextView txt_carreira;
@@ -69,7 +68,6 @@ public class RangeWheesLife extends AppCompatActivity {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             txt_saude.setText(String.valueOf(progress));
-            itens.setSaude(progress);
         }
 
         @Override
@@ -86,8 +84,6 @@ public class RangeWheesLife extends AppCompatActivity {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             txt_amigos.setText(String.valueOf(progress));
-
-            itens.setAmigos(progress);
         }
 
         @Override
@@ -104,7 +100,6 @@ public class RangeWheesLife extends AppCompatActivity {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             txt_financa.setText(String.valueOf(progress));
-            itens.setFinanca(progress);
         }
 
         @Override
@@ -121,7 +116,6 @@ public class RangeWheesLife extends AppCompatActivity {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             txt_pessoal.setText(String.valueOf(progress));
-            itens.setCresPessoal(progress);
         }
 
         @Override
@@ -138,7 +132,6 @@ public class RangeWheesLife extends AppCompatActivity {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             txt_carreira.setText(String.valueOf(progress));
-            itens.setCarreira(progress);
         }
 
         @Override

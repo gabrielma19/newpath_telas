@@ -1,7 +1,10 @@
 package com.example.user.newpath.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -10,6 +13,7 @@ import com.example.user.newpath.R;
 import com.example.user.newpath.model.Itens;
 
 public class RangeWheelsLife_Two extends AppCompatActivity {
+    private Button   btn_graphic;
     private TextView txt_familia;
     private TextView txt_afeto;
     private TextView txt_divercao;
@@ -20,6 +24,7 @@ public class RangeWheelsLife_Two extends AppCompatActivity {
     private SeekBar seek_divercao;
     private SeekBar seek_coletivo;
     private SeekBar seek_espirito;
+
 
     private Itens itens;
 
@@ -38,6 +43,7 @@ public class RangeWheelsLife_Two extends AppCompatActivity {
         txt_divercao  = (TextView)findViewById(R.id.txt_divercao);
         txt_coletivo  = (TextView)findViewById(R.id.txt_coletivo);
         txt_espirito  = (TextView)findViewById(R.id.txt_espirito);
+        btn_graphic   = (Button)findViewById(R.id.btn_finally);
 
         seek_afeto.setOnSeekBarChangeListener(seekBarChangeAfeto);
         seek_familia.setOnSeekBarChangeListener(seekBarChangeFamily);
@@ -45,13 +51,23 @@ public class RangeWheelsLife_Two extends AppCompatActivity {
         seek_coletivo.setOnSeekBarChangeListener(seekBarChangeColetivo);
         seek_espirito.setOnSeekBarChangeListener(seekBarChangeEspirito);
 
+        btn_graphic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                generateGraphic();
+            }
+        });
 
+
+    }
+    public void  generateGraphic() {
+        Intent intent = new Intent(RangeWheelsLife_Two.this, ChartGraph.class);
+        startActivity(intent);
     }
     private SeekBar.OnSeekBarChangeListener seekBarChangeFamily = new SeekBar.OnSeekBarChangeListener() {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             txt_familia.setText(String.valueOf(progress));
-            itens.setRelFamiliar(progress);
         }
 
         @Override
@@ -68,7 +84,6 @@ public class RangeWheelsLife_Two extends AppCompatActivity {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             txt_afeto.setText(String.valueOf(progress));
-            itens.setRelAfetivo(progress);
         }
 
         @Override
@@ -85,7 +100,6 @@ public class RangeWheelsLife_Two extends AppCompatActivity {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             txt_divercao.setText(String.valueOf(progress));
-            itens.setDivercao(progress);
         }
 
         @Override
@@ -102,7 +116,6 @@ public class RangeWheelsLife_Two extends AppCompatActivity {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             txt_coletivo.setText(String.valueOf(progress));
-            itens.setContColetivo(progress);
         }
 
         @Override
@@ -119,7 +132,6 @@ public class RangeWheelsLife_Two extends AppCompatActivity {
         @Override
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
             txt_espirito.setText(String.valueOf(progress));
-            itens.setEspiritualidade(progress);
         }
 
         @Override

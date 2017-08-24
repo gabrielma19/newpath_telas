@@ -15,7 +15,6 @@ import com.example.user.newpath.activity.ChallengeConclued;
 
 public class UserProfile extends AppCompatActivity {
 
-    private TextView mTextMessage;
     private FragmentManager fragmentManager;
     private Fragment fragment;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -28,7 +27,7 @@ public class UserProfile extends AppCompatActivity {
                     fragment = new ChallengeConclued();
                     break;
                 case R.id.navigation_dashboard:
-                    fragment = new ChallengeConclued();
+                    fragment = new DashboardUser();
                     break;
                 case R.id.navigation_notifications:
                     fragment = new ChallengeConclued();

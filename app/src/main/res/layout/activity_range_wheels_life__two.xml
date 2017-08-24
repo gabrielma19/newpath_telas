@@ -33,89 +33,100 @@
 
         <TextView
             android:id="@+id/textView18"
-            android:layout_width="281dp"
-            android:layout_height="42dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="19dp"
             android:text="@string/rangeWheels"
             android:textColor="@color/colorFontPrincipal"
             android:textSize="17sp"
             app:layout_constraintLeft_toLeftOf="@+id/guideline5"
             app:layout_constraintRight_toLeftOf="@+id/guideline9"
-            app:layout_constraintTop_toTopOf="@+id/guideline3" />
+            app:layout_constraintTop_toTopOf="@+id/guideline3"
+            app:layout_constraintHorizontal_bias="0.0" />
 
         <TextView
             android:id="@+id/textView19"
-            android:layout_width="278dp"
-            android:layout_height="111dp"
-            android:layout_marginTop="17dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
             android:text="@string/obsWheels"
             app:layout_constraintRight_toRightOf="@+id/textView18"
             app:layout_constraintTop_toBottomOf="@+id/textView18"
             android:textSize="15sp"
             android:textColor="@color/colorFontSecondary"
+            android:layout_marginRight="8dp"
             android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toLeftOf="@+id/textView18"
-            app:layout_constraintHorizontal_bias="0.916"
-            android:layout_marginRight="0dp" />
+            app:layout_constraintLeft_toLeftOf="@+id/guideline5"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
 
         <TextView
             android:id="@+id/textView20"
-            android:layout_width="155dp"
-            android:layout_height="19dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="@string/family"
-            app:layout_constraintTop_toTopOf="@+id/seek_familia"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/seek_familia"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintRight_toLeftOf="@+id/seek_familia"
-            android:layout_marginRight="8dp"
-            app:layout_constraintVertical_bias="0.75"
             android:textColor="@color/colorFontPrincipal"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView19"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/textView19"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="@+id/textView19"
+            app:layout_constraintHorizontal_bias="0.506"
+            android:layout_marginStart="8dp" />
 
         <TextView
             android:id="@+id/textView21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/affective"
-            app:layout_constraintRight_toLeftOf="@+id/seek_afeto"
-            android:layout_marginRight="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/seek_afeto"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintTop_toTopOf="@+id/seek_afeto"
             android:textColor="@color/colorFontPrincipal"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/textView20"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/seek_familia"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="@+id/textView20"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginStart="8dp" />
 
         <TextView
             android:id="@+id/textView22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/fun"
-            app:layout_constraintTop_toTopOf="@+id/seek_divercao"
-            app:layout_constraintBottom_toBottomOf="@+id/seek_divercao"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintRight_toLeftOf="@+id/seek_divercao"
-            android:layout_marginRight="8dp"
-            app:layout_constraintVertical_bias="0.75"
             android:textColor="@color/colorFontPrincipal"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/textView21"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/seek_afeto"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="@+id/textView21"
+            app:layout_constraintHorizontal_bias="0.653"
+            android:layout_marginStart="8dp" />
 
         <TextView
             android:id="@+id/textView23"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Contribuição com o coletivo"
-            app:layout_constraintTop_toTopOf="@+id/seek_coletivo"
-            app:layout_constraintBottom_toBottomOf="@+id/seek_coletivo"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintRight_toLeftOf="@+id/seek_coletivo"
-            android:layout_marginRight="8dp"
             android:textColor="@color/colorFontPrincipal"
+            app:layout_constraintLeft_toLeftOf="@+id/textView22"
+            app:layout_constraintTop_toBottomOf="@+id/seek_divercao"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="@+id/textView22"
+            app:layout_constraintHorizontal_bias="0.47"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp" />
 
         <TextView
@@ -123,94 +134,101 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/spirituality"
-            app:layout_constraintBottom_toBottomOf="@+id/seek_espirito"
-            app:layout_constraintTop_toTopOf="@+id/seek_espirito"
-            app:layout_constraintRight_toLeftOf="@+id/seek_espirito"
-            android:layout_marginRight="8dp"
-            app:layout_constraintVertical_bias="0.25"
             android:textColor="@color/colorFontPrincipal"
+            app:layout_constraintLeft_toLeftOf="@+id/textView23"
+            app:layout_constraintTop_toBottomOf="@+id/seek_coletivo"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="@+id/textView23"
+            android:layout_marginTop="8dp"
+            app:layout_constraintHorizontal_bias="0.513"
             android:layout_marginEnd="8dp" />
 
         <SeekBar
             android:id="@+id/seek_familia"
-            android:layout_width="115dp"
+            android:layout_width="277dp"
             android:layout_height="33dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="22dp"
             android:max="10"
             android:progress="0"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintLeft_toLeftOf="@+id/textView19"
-            app:layout_constraintRight_toRightOf="@+id/textView19"
-            app:layout_constraintTop_toBottomOf="@+id/textView19"
             android:thumb="@drawable/custom_thumb"
             android:progressTint="@color/colorFontPrincipal"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/textView20"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView20"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="@+id/textView20"
+            app:layout_constraintHorizontal_bias="0.503" />
+
+        <SeekBar
+            android:id="@+id/seek_afeto"
+            android:layout_width="277dp"
+            android:layout_height="33dp"
+            android:max="10"
+            android:progress="0"
+            android:thumb="@drawable/custom_thumb"
+            android:progressTint="@color/colorFontPrincipal"
+            android:layout_marginTop="7dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView21"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/seek_familia"
+            app:layout_constraintRight_toRightOf="@+id/seek_familia"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginStart="8dp" />
+
+        <SeekBar
+            android:id="@+id/seek_divercao"
+            android:layout_width="277dp"
+            android:layout_height="33dp"
+            android:max="10"
+            android:progress="0"
+            android:thumb="@drawable/custom_thumb"
+            android:progressTint="@color/colorFontPrincipal"
+            android:layout_marginTop="7dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView22"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/seek_afeto"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="@+id/seek_afeto"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.52" />
+
+        <SeekBar
+            android:id="@+id/seek_coletivo"
+            android:layout_width="277dp"
+            android:layout_height="33dp"
+            android:max="10"
+            android:progress="0"
+            android:thumb="@drawable/custom_thumb"
+            android:progressTint="@color/colorFontPrincipal"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/seek_divercao"
+            android:layout_marginTop="7dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView23"
+            app:layout_constraintRight_toLeftOf="@+id/txt_divercao"
+            android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="1.0"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp" />
 
         <SeekBar
-            android:id="@+id/seek_afeto"
-            android:layout_width="115dp"
-            android:layout_height="33dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="13dp"
-            android:max="10"
-            android:progress="0"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="@+id/seek_familia"
-            app:layout_constraintRight_toRightOf="@+id/seek_familia"
-            app:layout_constraintTop_toBottomOf="@+id/seek_familia"
-            android:thumb="@drawable/custom_thumb"
-            android:progressTint="@color/colorFontPrincipal"
-            android:layout_marginEnd="8dp" />
-
-        <SeekBar
-            android:id="@+id/seek_divercao"
-            android:layout_width="115dp"
-            android:layout_height="33dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="13dp"
-            android:max="10"
-            android:progress="0"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="@+id/seek_afeto"
-            app:layout_constraintRight_toRightOf="@+id/seek_afeto"
-            app:layout_constraintTop_toBottomOf="@+id/seek_afeto"
-            android:thumb="@drawable/custom_thumb"
-            android:progressTint="@color/colorFontPrincipal"
-            android:layout_marginEnd="8dp" />
-
-        <SeekBar
-            android:id="@+id/seek_coletivo"
-            android:layout_width="115dp"
-            android:layout_height="33dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="13dp"
-            android:max="10"
-            android:progress="0"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="@+id/seek_divercao"
-            app:layout_constraintRight_toRightOf="@+id/seek_divercao"
-            app:layout_constraintTop_toBottomOf="@+id/seek_divercao"
-            android:thumb="@drawable/custom_thumb"
-            android:progressTint="@color/colorFontPrincipal"
-            android:layout_marginEnd="8dp" />
-
-        <SeekBar
             android:id="@+id/seek_espirito"
-            android:layout_width="115dp"
+            android:layout_width="277dp"
             android:layout_height="33dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="17dp"
             android:max="10"
             android:progress="0"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="@+id/seek_coletivo"
-            app:layout_constraintRight_toRightOf="@+id/seek_coletivo"
-            app:layout_constraintTop_toBottomOf="@+id/seek_coletivo"
             android:thumb="@drawable/custom_thumb"
             android:progressTint="@color/colorFontPrincipal"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/seek_coletivo"
+            android:layout_marginTop="14dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView24"
+            app:layout_constraintRight_toLeftOf="@+id/txt_coletivo"
+            android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp" />
 
         <TextView
@@ -218,67 +236,81 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
-            app:layout_constraintLeft_toRightOf="@+id/seek_familia"
-            android:layout_marginLeft="9dp"
+            android:textColor="@color/colorFontSecondary"
+            android:layout_marginStart="9dp"
             app:layout_constraintTop_toTopOf="@+id/seek_familia"
+            android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/seek_familia"
             android:layout_marginBottom="8dp"
-            android:textColor="@color/colorFontSecondary"
-            app:layout_constraintVertical_bias="0.75"
-            android:layout_marginStart="9dp" />
+            app:layout_constraintLeft_toRightOf="@+id/seek_familia"
+            android:layout_marginLeft="9dp"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/txt_afeto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
+            android:textColor="@color/colorFontSecondary"
+            android:layout_marginStart="8dp"
             app:layout_constraintLeft_toRightOf="@+id/seek_afeto"
             android:layout_marginLeft="8dp"
+            app:layout_constraintRight_toLeftOf="@+id/guideline9"
+            app:layout_constraintTop_toTopOf="@+id/seek_afeto"
+            android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/seek_afeto"
-            android:layout_marginBottom="12dp"
-            android:textColor="@color/colorFontSecondary"
-            android:layout_marginStart="8dp" />
+            android:layout_marginBottom="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/txt_divercao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
-            app:layout_constraintLeft_toRightOf="@+id/seek_divercao"
-            android:layout_marginLeft="8dp"
+            android:textColor="@color/colorFontSecondary"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@+id/seek_divercao"
+            android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/seek_divercao"
             android:layout_marginBottom="8dp"
-            app:layout_constraintTop_toTopOf="@+id/seek_divercao"
-            app:layout_constraintVertical_bias="0.75"
-            android:textColor="@color/colorFontSecondary"
-            android:layout_marginStart="8dp" />
+            app:layout_constraintLeft_toRightOf="@+id/seek_divercao"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintRight_toLeftOf="@+id/guideline9"
+            app:layout_constraintHorizontal_bias="0.056"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/txt_coletivo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
-            app:layout_constraintLeft_toRightOf="@+id/seek_coletivo"
-            android:layout_marginLeft="8dp"
+            android:textColor="@color/colorFontSecondary"
+            android:layout_marginStart="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/seek_coletivo"
             android:layout_marginBottom="8dp"
+            app:layout_constraintLeft_toRightOf="@+id/seek_coletivo"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintRight_toLeftOf="@+id/guideline9"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintTop_toTopOf="@+id/seek_coletivo"
-            app:layout_constraintVertical_bias="0.875"
-            android:textColor="@color/colorFontSecondary"
-            android:layout_marginStart="8dp" />
+            android:layout_marginTop="8dp"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/txt_espirito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0"
-            app:layout_constraintBottom_toBottomOf="@+id/seek_espirito"
-            android:layout_marginBottom="8dp"
+            android:textColor="@color/colorFontSecondary"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             app:layout_constraintLeft_toRightOf="@+id/seek_espirito"
             android:layout_marginLeft="8dp"
             app:layout_constraintTop_toTopOf="@+id/seek_espirito"
-            android:textColor="@color/colorFontSecondary"
-            android:layout_marginStart="8dp" />
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/seek_espirito"
+            android:layout_marginBottom="8dp" />
 
         <Button
             android:id="@+id/btn_finally"
@@ -287,17 +319,16 @@
             android:text="Finalizar e enviar"
             android:background="@drawable/button_bg_radius"
             android:textColor="@color/colorButton"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="50dp"
-            android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@+id/seek_espirito"
-            app:layout_constraintVertical_bias="0.666"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:layout_marginRight="8dp"
-            app:layout_constraintRight_toRightOf="parent"
             android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/seek_espirito"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="@+id/seek_espirito"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="@+id/seek_espirito" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
@@ -305,7 +336,7 @@
             android:id="@+id/guideline3"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.1"
-            tools:layout_editor_absoluteY="85dp"
+            tools:layout_editor_absoluteY="91dp"
             tools:layout_editor_absoluteX="0dp" />
 
         <android.support.constraint.Guideline
@@ -313,14 +344,18 @@
             android:layout_height="wrap_content"
             android:id="@+id/guideline5"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.09166667" />
+            app:layout_constraintGuide_percent="0.09166667"
+            tools:layout_editor_absoluteY="25dp"
+            tools:layout_editor_absoluteX="38dp" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/guideline9"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.9111111" />
+            app:layout_constraintGuide_percent="0.91"
+            tools:layout_editor_absoluteY="25dp"
+            tools:layout_editor_absoluteX="374dp" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
