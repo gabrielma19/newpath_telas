@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.SplashScreen">
+        <activity android:name=".fragment.UserProfile">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,7 +22,7 @@
         <activity android:name=".activity.WheelsOfLife" />
         <activity android:name=".activity.RangeWheesLife" />
         <activity android:name=".activity.RangeWheelsLife_Two" />
-        <activity android:name=".fragment.UserProfile" />
+        <activity android:name=".activity.SplashScreen" />
         <activity android:name=".activity.ChartGraph" />
         <activity android:name=".activity.ResultWheelsOfLife" />
         <activity android:name=".activity.RegisterEmail"></activity>
