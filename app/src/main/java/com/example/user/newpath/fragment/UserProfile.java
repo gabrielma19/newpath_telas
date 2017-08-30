@@ -8,10 +8,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import com.example.user.newpath.R;
-import com.example.user.newpath.activity.ChallengeConclued;
 
 public class UserProfile extends AppCompatActivity {
 
@@ -24,13 +22,13 @@ public class UserProfile extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    fragment = new ChallengeConclued();
+                    fragment = new fragments_products_natura();
                     break;
                 case R.id.navigation_dashboard:
                     fragment = new DashboardUser();
                     break;
                 case R.id.navigation_notifications:
-                    fragment = new ChallengeConclued();
+                    fragment = new fragments_products_natura();
                     break;
             }
             final FragmentTransaction transaction = fragmentManager.beginTransaction();

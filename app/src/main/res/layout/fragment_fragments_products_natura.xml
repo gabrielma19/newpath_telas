@@ -1,0 +1,35 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.user.newpath.fragment.fragments_products_natura">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:gravity="center"
+        android:background="@drawable/gradient_background">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="140dp"
+            android:layout_height="50sp"
+            android:layout_marginRight="120dp"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/logo_sup_w" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loja"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#FFF"/>
+    </LinearLayout>
+
+</FrameLayout>
