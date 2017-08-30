@@ -6,11 +6,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/ic_launcher_path"
+        android:roundIcon="@mipmap/ic_launcher_path_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".fragment.UserProfile">
+        <activity android:name=".activity.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,7 +22,7 @@
         <activity android:name=".activity.WheelsOfLife" />
         <activity android:name=".activity.RangeWheesLife" />
         <activity android:name=".activity.RangeWheelsLife_Two" />
-        <activity android:name=".activity.SplashScreen" />
+        <activity android:name=".fragment.UserProfile" />
         <activity android:name=".activity.ChartGraph" />
         <activity android:name=".activity.ResultWheelsOfLife" />
         <activity android:name=".activity.RegisterEmail"></activity>
