@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "996195932",
+    "firebase_url": "https://natura-challenge.firebaseio.com",
+    "project_id": "natura-challenge",
+    "storage_bucket": "natura-challenge.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:996195932:android:d569bf5d9a01843f",
+        "android_client_info": {
+          "package_name": "com.example.user.newpath"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "996195932-o3hh2gulpb4tjn75ki3vsg95a88eghsc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.user.newpath",
+            "certificate_hash": "61754995e984be4d07b46ee6d1f9c06676095fe7"
+          }
+        },
+        {
+          "client_id": "996195932-to1hd6u3m52h0g4o1v3ha5i3971lkcfg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJkfxPacgiAduMQpU7qIahVNVv699l5zk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "996195932-to1hd6u3m52h0g4o1v3ha5i3971lkcfg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

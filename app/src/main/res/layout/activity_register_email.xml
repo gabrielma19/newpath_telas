@@ -65,12 +65,12 @@
             android:text="Email"
             android:textColor="@color/colorFontPrincipal"
             android:layout_marginLeft="0dp"
-            app:layout_constraintLeft_toLeftOf="@+id/editText3"
+            app:layout_constraintLeft_toLeftOf="@+id/edtNascimento"
             android:layout_marginRight="8dp"
-            app:layout_constraintRight_toRightOf="@+id/editText3"
+            app:layout_constraintRight_toRightOf="@+id/edtNascimento"
             app:layout_constraintHorizontal_bias="0.0"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/editText3" />
+            app:layout_constraintTop_toBottomOf="@+id/edtNascimento" />
 
         <TextView
             android:id="@+id/Senha"
@@ -169,7 +169,7 @@
             app:layout_constraintGuide_percent="0.13050076" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/edtNascimento"
             android:layout_width="312dp"
             android:layout_height="45dp"
             android:ems="10"
