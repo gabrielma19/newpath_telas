@@ -6,31 +6,18 @@ package com.example.user.newpath.model;
 
 public class Itens {
 
-    private int cresPessoal;
-    private int carreira;
-    private int financa;
     private int saude;
     private int amigos;
-    private int relFamiliar;
-    private int relAfetivo;
+    private int financa;
     private int divercao;
+    private int carreira;
+    private int relAfetivo;
+    private int relFamiliar;
+    private int cresPessoal;
     private int contColetivo;
     private int espiritualidade;
 
     public Itens() {
-    }
-
-    public Itens(int cresPessoal, int carreira, int financa, int saude, int amigos, int relFamiliar, int relAfetivo, int divercao, int contColetivo, int espiritualidade) {
-        this.cresPessoal = cresPessoal;
-        this.carreira = carreira;
-        this.financa = financa;
-        this.saude = saude;
-        this.amigos = amigos;
-        this.relFamiliar = relFamiliar;
-        this.relAfetivo = relAfetivo;
-        this.divercao = divercao;
-        this.contColetivo = contColetivo;
-        this.espiritualidade = espiritualidade;
     }
 
     public int getCresPessoal() {

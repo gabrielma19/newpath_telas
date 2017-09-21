@@ -14,7 +14,7 @@ import java.util.UUID;
  */
 
 public class User {
-        public UUID id;
+        public String id;
         public String nome;
         public String aniversario;
         public String email;
@@ -42,11 +42,11 @@ public class User {
             return hashMapUser;
         }
 
-        public UUID getId() {
+        public String getId() {
             return id;
         }
 
-        public void setId(UUID id) {
+        public void setId(String id) {
             this.id = id;
         }
 

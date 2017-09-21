@@ -1,5 +1,7 @@
 package com.example.user.newpath.Helper;
 
+import android.util.Base64;
+
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -9,11 +11,13 @@ import java.security.NoSuchAlgorithmException;
  */
 
 public class MD5Custom {
-    public  static String codificarMd5 (String password) throws NoSuchAlgorithmException {
-        MessageDigest md = MessageDigest.getInstance("MD5");
+    public  static String codificarMd5 (String password) {
+        return Base64.encodeToString(password.getBytes(), Base64.DEFAULT).replace("(\\n\\r)", "");
 
-        BigInteger has = new BigInteger(1, md.digest(password.getBytes()));
-
-        return  String.format("%32x", has);
     }
+
+    public static String decodificarBase64 (String passwordCodificado) {
+        return new String(Base64.decode(passwordCodificado, Base64.DEFAULT));
+    }
+
 }

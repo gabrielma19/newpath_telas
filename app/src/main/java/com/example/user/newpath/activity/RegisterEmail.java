@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.system.ErrnoException;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -62,9 +63,9 @@ public class RegisterEmail extends AppCompatActivity {
     public void gravarInformacoes() {
         if(!edtSenha.getText().toString().equals("")){
             user = new User();
-            user.setSenha(edtNome.getText().toString());
+            user.setSenha(edtSenha.getText().toString());
             user.setEmail(edtEmail.getText().toString());
-            user.setNome(edtSenha.getText().toString());
+            user.setNome(edtNome.getText().toString());
             user.setAniversario(edtNascimento.getText().toString());
             cadastrarUser();
         }
@@ -80,20 +81,17 @@ public class RegisterEmail extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(RegisterEmail.this, "Usuario Cadastrado Com Sucesso", Toast.LENGTH_SHORT).show();
-                    try {
                         String idenficadorUser = MD5Custom.codificarMd5(user.getSenha());
+
                         FirebaseUser userFirebase = task.getResult().getUser();
-                        user.setId(UUID.randomUUID());
+
+                        user.setId(idenficadorUser);
                         user.salvar();
 
                         Preferences preferencia = new Preferences(RegisterEmail.this);
-                        preferencia.salvarUsuarioPref(idenficadorUser, user.getEmail());
+                        preferencia.salvarUsuarioPref(idenficadorUser, user.getNome());
 
                         openLoginUser();
-
-                    } catch (NoSuchAlgorithmException e) {
-                        e.printStackTrace();
-                    }
                 }else {
                     String erroException = "";
 
