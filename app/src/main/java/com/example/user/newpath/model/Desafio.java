@@ -1,15 +1,22 @@
 package com.example.user.newpath.model;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by User on 25/08/2017.
- */
+import java.util.ArrayList;
 
 public class Desafio {
 
-    public List<ItensChallenge> desafios;
+    @SerializedName("challenges")
+    public ArrayList<ItensChallenge> challenges;
+
+
+    public ArrayList<ItensChallenge> getChallenges() {
+        return challenges;
+    }
+
+    public void setChallenges(ArrayList<ItensChallenge> challenges) {
+        this.challenges = challenges;
+    }
+
 
 }
