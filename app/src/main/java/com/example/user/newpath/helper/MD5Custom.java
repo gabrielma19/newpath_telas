@@ -1,10 +1,6 @@
-package com.example.user.newpath.Helper;
+package com.example.user.newpath.helper;
 
 import android.util.Base64;
-
-import java.math.BigInteger;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 
 /**
  * Created by User on 01/06/2017.

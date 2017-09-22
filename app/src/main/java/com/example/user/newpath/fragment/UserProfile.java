@@ -8,10 +8,17 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 import com.example.user.newpath.R;
+import com.example.user.newpath.adapter.ChallengeAdapter;
+import com.example.user.newpath.model.Desafio;
+
+import java.util.ArrayList;
 
 public class UserProfile extends AppCompatActivity {
+
+
 
     private FragmentManager fragmentManager;
     private Fragment fragment;
@@ -46,6 +53,10 @@ public class UserProfile extends AppCompatActivity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         fragmentManager = getSupportFragmentManager();
+
+
+
+
     }
 
 }

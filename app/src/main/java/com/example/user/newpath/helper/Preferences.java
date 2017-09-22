@@ -1,4 +1,4 @@
-package com.example.user.newpath.Helper;
+package com.example.user.newpath.helper;
 
 import android.content.Context;
 import android.content.SharedPreferences;

@@ -29,12 +29,12 @@ public class ChallengeAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return desafios.size();
     }
 
     @Override
-    public Object getItem(int position) {
-        return null;
+    public Desafio getItem(int position) {
+        return desafios.get(position);
     }
 
     @Override
@@ -45,21 +45,22 @@ public class ChallengeAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup parent) {
         ViewHolder viewHolder;
+
         if (view == null){
 
+            LayoutInflater layoutInflater = LayoutInflater.from(context);
+            view = layoutInflater.inflate(R.layout.adpter_challenge_list, null);
 
-        LayoutInflater layoutInflater = LayoutInflater.from(context);
-        view = layoutInflater.inflate(R.layout.adpter_challenge_list, null);
+            TextView txt_desc_challenge = (TextView)view.findViewById(R.id.txt_desc_challenge);
+            TextView txt_data_challenge = (TextView)view.findViewById(R.id.txt_date_challenge);
+            TextView txt_point_challenge = (TextView)view.findViewById(R.id.txt_points_challenge);
 
-        TextView txt_desc_challenge = (TextView)view.findViewById(R.id.txt_desc_challenge);
-        TextView txt_data_challenge = (TextView)view.findViewById(R.id.txt_date_challenge);
-        TextView txt_point_challenge = (TextView)view.findViewById(R.id.txt_points_challenge);
-
-        viewHolder = new ViewHolder(txt_desc_challenge, txt_data_challenge, txt_point_challenge);
+            viewHolder = new ViewHolder(txt_desc_challenge, txt_data_challenge, txt_point_challenge);
             view.setTag(viewHolder);
-        }else {
+
+        }else
             viewHolder = (ViewHolder)view.getTag();
-        }
+
         fillFields(i, viewHolder);
 
         return view;
