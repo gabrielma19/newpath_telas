@@ -17,5 +17,5 @@ public interface RequestChallenge {
     public static final String BASE_URL = "https://natura-challenge.firebaseio.com/";
 
     @GET("challenges/{id}.json")
-    Call<ItensChallengen> getChallenges();
+    Call<Desafio> getChallenges();
 }

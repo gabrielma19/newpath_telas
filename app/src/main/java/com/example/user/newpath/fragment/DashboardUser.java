@@ -4,6 +4,7 @@ package com.example.user.newpath.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.user.newpath.R;
 import com.example.user.newpath.adapter.ChallengeAdapter;
@@ -18,9 +20,6 @@ import com.example.user.newpath.model.Desafio;
 import com.example.user.newpath.request.RequestChallenge;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-
-import okhttp3.Challenge;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Call;
@@ -35,7 +34,6 @@ public class DashboardUser extends Fragment {
     private ListView listView;
 
     protected View view;
-    private LinearLayout box_finalizar_desafio;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -52,17 +50,15 @@ public class DashboardUser extends Fragment {
 
         RequestChallenge service = retrofit.create(RequestChallenge.class);
 
-        service.getChallenges().enqueue(new Callback<RequestChallenge>() {
+        service.getChallenges().enqueue(new Callback<Desafio>() {
             @Override
-            public void onResponse(Call<RequestChallenge> call, Response<RequestChallenge> response) {
-                RequestChallenge json = response.body();
-                chall = new ArrayList<>(Arrays.asList(json.ge))
-                String result = desafios.size()==0 ? "Desafio nao encontrada" : desafios.get(desafios.size()-1).getChallenges().;
-                mResult.setText(response.body().getChannel().getField1() + " - " + result);
+            public void onResponse(Call<Desafio> call, Response<Desafio> response) {
+                response.body().getChallenges();
+
             }
 
             @Override
-            public void onFailure(Call<ArduinoResponse> call, Throwable t) {
+            public void onFailure(Call<Desafio> call, Throwable t) {
 
             }
         });
