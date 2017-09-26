@@ -11,7 +11,7 @@ public class Desafio {
 
 
     public ArrayList<ItensChallenge> getChallenges() {
-        return challenges;
+        return challenges != null ? challenges:new ArrayList<ItensChallenge>();
     }
 
     public void setChallenges(ArrayList<ItensChallenge> challenges) {

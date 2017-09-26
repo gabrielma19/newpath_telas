@@ -58,6 +58,7 @@ public class LoginPage extends AppCompatActivity {
     }
 
 
+
     public void  loginWithEmail(){
         if(!edt_email.getText().toString().equals("") && !edt_email.getText().toString().equals("")){
             user = new User();

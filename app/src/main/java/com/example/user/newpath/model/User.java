@@ -20,7 +20,6 @@ public class User {
         public String email;
         public String senha;
 
-
         public User() {
 
         }

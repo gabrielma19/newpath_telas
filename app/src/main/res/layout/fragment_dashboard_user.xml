@@ -243,7 +243,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/txt_desc_challenge"
+                    android:id="@+id/txt_desc_challenge_today"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
@@ -280,7 +280,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/txt_date_challenge"
+                    android:id="@+id/txt_date_challenge_today"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
@@ -317,7 +317,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/txt_points_challenge"
+                    android:id="@+id/txt_points_challenge_today"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"

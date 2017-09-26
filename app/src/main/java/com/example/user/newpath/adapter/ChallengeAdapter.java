@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.user.newpath.R;
 import com.example.user.newpath.model.Desafio;
+import com.example.user.newpath.model.ItensChallenge;
 
 import java.util.ArrayList;
 
@@ -20,9 +21,9 @@ import java.util.ArrayList;
 public class ChallengeAdapter extends BaseAdapter {
 
     private Context context;
-    private ArrayList<Desafio> desafios;
+    private ArrayList<ItensChallenge> desafios;
 
-    public  ChallengeAdapter(ArrayList<Desafio> desafios, Context context){
+    public  ChallengeAdapter(ArrayList<ItensChallenge> desafios, Context context){
         this.desafios = desafios;
         this.context = context;
     }
@@ -33,7 +34,7 @@ public class ChallengeAdapter extends BaseAdapter {
     }
 
     @Override
-    public Desafio getItem(int position) {
+    public ItensChallenge getItem(int position) {
         return desafios.get(position);
     }
 
@@ -67,6 +68,12 @@ public class ChallengeAdapter extends BaseAdapter {
     }
 
     public void fillFields(int position, ViewHolder viewHolder){
+
+        ItensChallenge itensChallenge = desafios.get(position);
+
+        viewHolder.txt_data_challenge.setText(itensChallenge.getTime());
+        viewHolder.txt_desc_challenge.setText(itensChallenge.getLabel());
+        viewHolder.txt_point_challenge.setText(itensChallenge.getWhere());
 
     }
 
