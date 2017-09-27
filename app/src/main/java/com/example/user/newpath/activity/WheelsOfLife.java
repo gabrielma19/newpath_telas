@@ -5,12 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.user.newpath.R;
+import com.example.user.newpath.helper.Preferences;
 
 public class WheelsOfLife extends AppCompatActivity {
-
-    Button btn_start_wheels;
+    private Button btn_start_wheels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

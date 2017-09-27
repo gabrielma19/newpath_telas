@@ -175,7 +175,6 @@
                     android:layout_height="wrap_content"
                     android:text="2503pts"/>
             </LinearLayout>
-
         </LinearLayout>
     </LinearLayout>
 
@@ -331,18 +330,6 @@
 
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/list_challenge"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
-        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
-        app:layout_constraintTop_toBottomOf="@+id/challenge_box"
-        app:layout_constraintVertical_bias="0.0" />
-
     <LinearLayout
         android:id="@+id/box_finalizar_desafio"
         android:layout_width="0dp"
@@ -390,31 +377,45 @@
 
         <LinearLayout
             android:id="@+id/description_challenge"
-            android:layout_width="250dp"
-            android:layout_height="230dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:gravity="center|top"
             android:background="#fff"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/txt_info_categoria"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="TITULO DESAFIO" />
             <TextView
+                android:layout_width="30dp"
+                android:layout_height="3dp"
+                android:background="#000"/>
+
+            <TextView
+                android:id="@+id/txt_info_descricao"
                 android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="DESCRIÇÃO DO DESAFIO \n LOCAL \nO BJETIVO" />
+                android:text="testes" />
+
+            <TextView
+                android:id="@+id/txt_info_local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Em casa"/>
+
 
         </LinearLayout>
 
         <ImageView
-            android:layout_marginTop="10dp"
             android:id="@+id/close_info"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
             app:srcCompat="@drawable/close_icon" />
 
     </LinearLayout>
@@ -471,7 +472,17 @@
 
     </LinearLayout>
 
-
+    <ListView
+        android:visibility="visible"
+        android:id="@+id/list_challenge"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/box_finalizar_desafio"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/challenge_box" />
 
 
 </android.support.constraint.ConstraintLayout>

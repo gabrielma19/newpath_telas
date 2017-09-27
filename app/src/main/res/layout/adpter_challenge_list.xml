@@ -5,17 +5,19 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:id="@+id/challenge_list"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:background="#FFFFFF"
-        android:gravity="top|center"
         android:orientation="horizontal"
         android:paddingBottom="10dp"
         android:paddingTop="10dp">
 
         <LinearLayout
+            android:gravity="left"
             android:id="@+id/pipe"
             android:layout_width="5dp"
             android:layout_height="match_parent"
@@ -23,12 +25,14 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
             android:background="#ff8161"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical"/>
 
         <LinearLayout
+            android:paddingLeft="30dp"
+            android:paddingRight="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center">
+            android:gravity="left">
 
             <LinearLayout
                 android:layout_width="wrap_content"

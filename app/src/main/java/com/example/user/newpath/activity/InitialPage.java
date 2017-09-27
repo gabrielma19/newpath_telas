@@ -36,6 +36,8 @@ public class InitialPage extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener authStateListener;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,18 +47,20 @@ public class InitialPage extends AppCompatActivity {
         btn_singUp = (Button) findViewById(R.id.btn_singUp);
 
         callbackManager = CallbackManager.Factory.create();
-        LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile", "email"));
+
+
         authFirebase();
 
         btn_loginFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                singInFacebook();
+                if (user != null){
+                    singInFacebook();
+                }
             }
         });
 
         btn_singUp.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View v) {
                 singUp();
@@ -65,6 +69,7 @@ public class InitialPage extends AppCompatActivity {
     }
 
     public void singInFacebook() {
+        LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile", "email"));
         LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
@@ -84,16 +89,13 @@ public class InitialPage extends AppCompatActivity {
             }
         });
     }
-
+    private FirebaseUser user;
     public void authFirebase() {
         firebaseAuth = FirebaseAuth.getInstance();
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null){
-                    singInFacebook();
-                }
+                user = firebaseAuth.getCurrentUser();
             }
         };
     }
@@ -120,6 +122,7 @@ public class InitialPage extends AppCompatActivity {
         Intent intent = new Intent(this, LoginPage.class);
         startActivity(intent);
     }
+
     private void initApp() {
         Intent intent = new Intent(this, WheelsOfLife.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);

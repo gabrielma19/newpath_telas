@@ -82,7 +82,7 @@ public class RegisterEmail extends AppCompatActivity {
                         user.salvar();
 
                         Preferences preferencia = new Preferences(RegisterEmail.this);
-                        preferencia.salvarUsuarioPref(idenficadorUser, user.getNome());
+                        preferencia.salvarUsuarioPref(user.getEmail(), user.getSenha());
 
                         openLoginUser();
                 }else {

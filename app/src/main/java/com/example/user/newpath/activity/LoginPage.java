@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.user.newpath.DAO.FirebaseConfig;
 import com.example.user.newpath.R;
+import com.example.user.newpath.helper.Preferences;
 import com.example.user.newpath.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -24,6 +25,7 @@ public class LoginPage extends AppCompatActivity {
     public TextView txt_singup;
     public EditText edt_password;
 
+    private Preferences preferences;
     private FirebaseAuth firebaseAuth;
 
     private User user;

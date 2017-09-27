@@ -9,7 +9,6 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.user.newpath.R;
-import com.example.user.newpath.model.Desafio;
 import com.example.user.newpath.model.ItensChallenge;
 
 import java.util.ArrayList;

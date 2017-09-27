@@ -1,7 +1,9 @@
 package com.example.user.newpath.request;
 
 
-import com.example.user.newpath.model.Desafio;
+import com.example.user.newpath.model.ItensChallenge;
+
+import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -14,5 +16,5 @@ public interface RequestChallenge {
 
 
     @GET("challenges.json")
-    Call<Desafio> getChallenges();
+    Call<ArrayList<ItensChallenge>> getChallenges();
 }
