@@ -13,10 +13,31 @@ import com.example.user.newpath.R;
 
 public class UserProfile extends AppCompatActivity {
 
+    private Fragment        fragment;
     private FragmentManager fragmentManager;
-    private Fragment fragment;
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_user_profile);
+
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        fragmentManager = getSupportFragmentManager();
+        fragment = new ChallengeToday();
+
+
+        setFragment(fragment);
+    }
+
+    private void setFragment(Fragment fragment){
+        if(fragment != null){
+            FragmentTransaction transaction = fragmentManager.beginTransaction();
+            transaction.replace(R.id.content, fragment).commit();
+        }
+    }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -31,26 +52,9 @@ public class UserProfile extends AppCompatActivity {
                     fragment = new fragments_products_natura();
                     break;
             }
-            final FragmentTransaction transaction = fragmentManager.beginTransaction();
-            transaction.replace(R.id.content, fragment).commit();
+            setFragment(fragment);
             return true;
         }
-
     };
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_profile);
-
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        fragmentManager = getSupportFragmentManager();
-        fragment = new ChallengeToday();
-
-
-
-
-    }
 
 }

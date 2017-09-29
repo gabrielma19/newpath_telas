@@ -14,14 +14,26 @@ import java.util.UUID;
  */
 
 public class User {
-        public String id;
-        public String nome;
-        public String aniversario;
-        public String email;
-        public String senha;
+
+
+    private static User user;
+
+    public String id;
+    public String nome;
+    public String aniversario;
+    public String email;
+    public String senha;
 
         public User() {
 
+        }
+
+        public static User instance(){
+            if(user != null )
+                return user;
+            else
+                user = new User();
+            return user;
         }
 
         public void salvar(){

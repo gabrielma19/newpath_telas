@@ -23,6 +23,8 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.Random;
+
 public class RegisterEmail extends AppCompatActivity {
     private User user;
 
@@ -64,6 +66,7 @@ public class RegisterEmail extends AppCompatActivity {
         }
     }
 
+
     public void cadastrarUser() {
         firebaseAuth = FirebaseConfig.getFirebaseAuth();
         firebaseAuth.createUserWithEmailAndPassword(
@@ -74,15 +77,19 @@ public class RegisterEmail extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(RegisterEmail.this, "Usuario Cadastrado Com Sucesso", Toast.LENGTH_SHORT).show();
-                        String idenficadorUser = MD5Custom.codificarMd5(user.getSenha());
+
+
+
 
                         FirebaseUser userFirebase = task.getResult().getUser();
 
-                        user.setId(idenficadorUser);
+                        user.setId(firebaseAuth.getCurrentUser().getUid().toString());
                         user.salvar();
 
+                        User.instance().getId();
+
                         Preferences preferencia = new Preferences(RegisterEmail.this);
-                        preferencia.salvarUsuarioPref(user.getEmail(), user.getSenha());
+                        preferencia.salvarUsuarioPref(user.getSenha(), user.getEmail());
 
                         openLoginUser();
                 }else {
