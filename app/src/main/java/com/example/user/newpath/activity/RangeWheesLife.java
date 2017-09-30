@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.user.newpath.R;
 import com.example.user.newpath.model.Itens;
+import com.example.user.newpath.model.User;
 
 public class RangeWheesLife extends AppCompatActivity {
 
@@ -59,7 +60,7 @@ public class RangeWheesLife extends AppCompatActivity {
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                nextPageWheels();
+                gravarInformacoes();
             }
         });
 
@@ -148,5 +149,17 @@ public class RangeWheesLife extends AppCompatActivity {
     public void nextPageWheels(){
         Intent intent = new Intent(this, RangeWheelsLife_Two.class);
         startActivity(intent);
+    }
+
+    private void gravarInformacoes() {
+        Itens itens = new Itens();
+
+        Itens.instance().setSaude(Integer.parseInt(txt_saude.getText().toString()));
+        Itens.instance().setAmigos(Integer.parseInt(txt_amigos.getText().toString()));
+        Itens.instance().setFinanca(Integer.parseInt(txt_financa.getText().toString()));
+        Itens.instance().setCresPessoal(Integer.parseInt(txt_pessoal.getText().toString()));
+        Itens.instance().setCarreira(Integer.parseInt(txt_carreira.getText().toString()));
+
+        nextPageWheels();
     }
 }

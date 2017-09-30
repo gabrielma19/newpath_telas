@@ -86,7 +86,8 @@ public class RegisterEmail extends AppCompatActivity {
                         user.setId(firebaseAuth.getCurrentUser().getUid().toString());
                         user.salvar();
 
-                        User.instance().getId();
+                        User.instance().setId(firebaseAuth.getCurrentUser().getUid().toString());
+
 
                         Preferences preferencia = new Preferences(RegisterEmail.this);
                         preferencia.salvarUsuarioPref(user.getSenha(), user.getEmail());

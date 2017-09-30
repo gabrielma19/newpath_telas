@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.user.newpath.R;
+import com.example.user.newpath.model.Itens;
+import com.example.user.newpath.model.User;
+import com.example.user.newpath.request.RequestUserProfile;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
@@ -17,11 +20,17 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.github.mikephil.charting.utils.ColorTemplate.*;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 
 public class ChartGraph extends AppCompatActivity {
 
     private Button btn_avaliation;
+    private ArrayList<Itens> itens;
     int porcents[] = {2, 5, 4, 8, 10, 7, 3, 8, 5, 7};
     String category[] = {"Crescimento Pessoal", "Carreira", "Finanças", " Saúde", "Vida Social", "Rel.Familiar", "Rel.Afetivo", "Diversão", "Cont. Coletivo", "Espiritualidade"};
 
@@ -29,8 +38,11 @@ public class ChartGraph extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_chart_graph);
         btn_avaliation = (Button) findViewById(R.id.btn_avaliation);
+
+        request();
 
         btn_avaliation.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +51,30 @@ public class ChartGraph extends AppCompatActivity {
             }
         });
         setupPieChart();
+    }
+
+    private void request() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://natura-challenge.firebaseio.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        RequestUserProfile service = retrofit.create(RequestUserProfile.class);
+
+
+
+        service.getItens(User.instance().getId()).enqueue(new Callback<ArrayList<Itens>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Itens>> call, Response<ArrayList<Itens>> response) {
+                itens = response.body();
+
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<Itens>> call, Throwable t) {
+
+            }
+        });
     }
 
     private void setupPieChart() {
