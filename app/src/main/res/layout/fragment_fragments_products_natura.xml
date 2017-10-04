@@ -1,17 +1,22 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.user.newpath.fragment.fragments_products_natura">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/produtcs_header"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:paddingTop="10dp"
         android:gravity="center"
-        android:background="@drawable/gradient_background">
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:background="@drawable/gradient_background"
+        tools:layout_editor_absoluteY="0dp">
 
         <ImageView
             android:id="@+id/imageView3"
@@ -31,5 +36,26 @@
             android:textStyle="bold"
             android:textColor="#FFF"/>
     </LinearLayout>
+    <ListView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/produtcs_list_left"
+        app:layout_constraintRight_toRightOf="@+id/produtcs_list_right"
+        app:layout_constraintTop_toBottomOf="@+id/produtcs_header"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-</FrameLayout>
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/produtcs_list_left"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/produtcs_list_right"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+</android.support.constraint.ConstraintLayout>

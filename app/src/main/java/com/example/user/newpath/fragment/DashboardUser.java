@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.user.newpath.R;
 import com.example.user.newpath.adapter.ChallengeAdapter;
+import com.example.user.newpath.model.Challenge;
 import com.example.user.newpath.model.ItensChallenge;
 import com.example.user.newpath.request.RequestChallenge;
 
@@ -123,6 +124,19 @@ public class DashboardUser extends Fragment {
         label.setText(desafios.get(0).getLabel());
         data.setText(desafios.get(0).getTime());
         pontos.setText(desafios.get(0).getValue());
+
+        Challenge.instance().setLabel(desafios.get(0).getLabel());
+        Challenge.instance().setTitulo(desafios.get(0).getTitle());
+        Challenge.instance().setDescricao(desafios.get(0).getDescripton());
+        Challenge.instance().setLocal(desafios.get(0).getWhere());
+        Challenge.instance().setTempo(desafios.get(0).getTime());
+        Challenge.instance().setValidacao(desafios.get(0).getValidation());
+        Challenge.instance().setValor(desafios.get(0).getValue());
+
+
+
+
+
     }
     private View.OnClickListener click_finalizar = new View.OnClickListener() {
         @Override
