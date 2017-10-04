@@ -151,6 +151,12 @@ public class RangeWheelsLife_Two extends AppCompatActivity {
     private void gravarDados() {
         Itens itens = new Itens();
 
+        Itens.instance().setRelFamiliar(Integer.parseInt(txt_familia.getText().toString()));
+        Itens.instance().setRelAfetivo(Integer.parseInt(txt_afeto.getText().toString()));
+        Itens.instance().setDivercao(Integer.parseInt(txt_divercao.getText().toString()));
+        Itens.instance().setContColetivo(Integer.parseInt(txt_coletivo.getText().toString()));
+        Itens.instance().setEspiritualidade(Integer.parseInt(txt_espirito.getText().toString()));
+
         itens.setSaude(Itens.instance().getSaude());
         itens.setAmigos(Itens.instance().getAmigos());
         itens.setFinanca(Itens.instance().getFinanca());

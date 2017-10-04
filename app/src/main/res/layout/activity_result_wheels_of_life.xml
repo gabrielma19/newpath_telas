@@ -9,7 +9,6 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         tools:context="com.example.user.newpath.activity.ResultWheelsOfLife">
 
         <ImageView
@@ -93,74 +92,21 @@
             android:layout_marginTop="10dp"
             app:layout_constraintTop_toBottomOf="@+id/txt_texto_1" />
 
-        <Button
-            android:layout_width="149dp"
-            android:layout_height="42dp"
-            android:id="@+id/btnFamiliar"
-            android:background="@drawable/button_bg_radius_grey"
-            android:text="@string/btn_familiar"
-            android:textSize="12sp"
-            android:elevation="5dp"
-            android:textColor="@color/colorFontSecondary"
-            android:textAllCaps="false"
-            app:layout_constraintTop_toTopOf="@+id/btnSaude"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/btnSaude"
-            android:layout_marginBottom="0dp"
-            app:layout_constraintVertical_bias="0.8"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toLeftOf="@+id/txt_texto_2"
-            app:layout_constraintRight_toLeftOf="@+id/btnSaude"
-            android:layout_marginRight="8dp"
-            app:layout_constraintHorizontal_bias="1.0" />
-
-        <Button
-            android:layout_width="162dp"
-            android:layout_height="40dp"
-            android:id="@+id/btnSaude"
-            android:background="@drawable/button_bg_radius_grey"
-            android:text="@string/btn_saude"
-            android:textSize="12sp"
-            android:textColor="@color/colorFontSecondary"
-            android:textAllCaps="false"
-            android:layout_marginTop="28dp"
-            app:layout_constraintTop_toBottomOf="@+id/txt_texto_2"
-            android:layout_marginRight="-53dp"
-            app:layout_constraintRight_toRightOf="@+id/txt_texto_1" />
-
-        <Button
+        <TextView
             android:layout_width="183dp"
             android:layout_height="41dp"
-            android:id="@+id/btnColetivo"
+            android:id="@+id/btn_area_de_trabalho"
             android:background="@drawable/button_bg_radius_grey"
-            android:text="@string/btn_coletivo"
             android:textSize="12sp"
             android:textColor="@color/colorFontSecondary"
             android:textAllCaps="false"
             android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toLeftOf="@+id/btnFamiliar"
-            app:layout_constraintTop_toTopOf="@+id/btnEspiritualidade"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toBottomOf="@+id/btnEspiritualidade"
-            android:layout_marginBottom="0dp"
-            app:layout_constraintRight_toLeftOf="@+id/btnEspiritualidade"
+            app:layout_constraintLeft_toLeftOf="@+id/txt_texto_2"
             android:layout_marginRight="8dp"
-            app:layout_constraintVertical_bias="0.888"
-            app:layout_constraintHorizontal_bias="1.0" />
-
-        <Button
-            android:layout_width="128dp"
-            android:layout_height="40dp"
-            android:id="@+id/btnEspiritualidade"
-            android:background="@drawable/button_bg_radius_grey"
-            android:text="@string/btn_espititualidade"
-            android:textSize="12sp"
-            android:textColor="@color/colorFontSecondary"
-            android:textAllCaps="false"
-            android:layout_marginRight="-40dp"
-            android:layout_marginTop="28dp"
-            app:layout_constraintTop_toBottomOf="@+id/btnSaude"
-            app:layout_constraintRight_toRightOf="@+id/btnSaude" />
+            app:layout_constraintRight_toRightOf="@+id/txt_texto_2"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/txt_texto_2"
+            app:layout_constraintHorizontal_bias="0.489" />
 
         <Button
 
@@ -171,17 +117,17 @@
             android:text="@string/btnFinalizar"
             android:textColor="@color/colorBackgroundForm"
             android:textAllCaps="false"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="15dp"
-            app:layout_constraintTop_toBottomOf="@+id/btnColetivo"
             android:layout_marginLeft="8dp"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginRight="8dp"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.0"
             android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp" />
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="-38dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/btn_area_de_trabalho"
+            app:layout_constraintVertical_bias="0.0" />
 
         <android.support.constraint.Guideline
             android:layout_width="wrap_content"
