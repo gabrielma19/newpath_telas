@@ -18,49 +18,72 @@ import java.util.ArrayList;
  * Created by jussi on 10/4/17.
  */
 
-public class ProductsNatura extends RecyclerView.Adapter<ProductsNatura.MyViewHolder> {
+public class ProductsNatura extends BaseAdapter {
 
     private ArrayList<Products> products;
     private LayoutInflater layoutInflater;
+    private Context context;
 
-    public  ProductsNatura(ArrayList<Products> produtos, Context context){
-        products = produtos;
-        layoutInflater= (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    public  ProductsNatura(ArrayList<Products> products, Context context){
+        this.products = products;
+        this.context = context;
     }
 
     @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = layoutInflater.inflate(R.layout.adapter_products_natura, parent, false);
-
-        MyViewHolder mvh = new MyViewHolder(v);
-        return mvh;
-
+    public int getCount() {
+        return products.size();
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
-
-
+    public Products getItem(int position) {
+        return products.get(position);
     }
 
     @Override
-    public int getItemCount() {
+    public long getItemId(int position) {
         return 0;
     }
 
+    @Override
+    public View getView(int i, View view, ViewGroup parent) {
+        ViewHolder viewHolder;
 
-    public class MyViewHolder extends RecyclerView.ViewHolder{
-        private ImageView prod_image;
-        private TextView  prod_description;
-        private TextView  prod_points;
+        if (view == null){
 
-        public MyViewHolder(View itemView) {
-            super(itemView);
+            LayoutInflater layoutInflater = LayoutInflater.from(context);
+            view = layoutInflater.inflate(R.layout.adpter_challenge_list, null);
 
-            prod_description = (TextView)itemView.findViewById(R.id.produtcs_description);
-            prod_points = (TextView)itemView.findViewById(R.id.produtcs_score);
-            prod_image = (ImageView)itemView.findViewById(R.id.produtcs_image);
+            TextView produtcs_description = (TextView)view.findViewById(R.id.produtcs_description);
+            TextView produtcs_score = (TextView)view.findViewById(R.id.produtcs_score);
 
+            viewHolder = new ViewHolder(produtcs_description, produtcs_score);
+            view.setTag(viewHolder);
+
+        }else
+            viewHolder = (ViewHolder)view.getTag();
+
+        fillFields(i, viewHolder);
+
+        return view;
+    }
+
+
+    public void fillFields(int position, ViewHolder viewHolder){
+
+        Products productsNatura = products.get(position);
+
+        viewHolder.produtcs_description.setText(productsNatura.getName());
+        viewHolder.produtcs_score.setText(productsNatura.getScore());
+
+    }
+
+    public class ViewHolder {
+        private TextView produtcs_description;
+        private TextView produtcs_score;
+
+        public ViewHolder(TextView produtcs_description,TextView produtcs_score) {
+            this.produtcs_description  = produtcs_description;
+            this.produtcs_score = produtcs_score;
         }
     }
 

@@ -49,7 +49,7 @@ public class UserProfile extends AppCompatActivity {
                     fragment = new DashboardUser();
                     break;
                 case R.id.navigation_notifications:
-                    fragment = new fragments_products_natura();
+                    fragment = new ProductsNatura();
                     break;
             }
             setFragment(fragment);

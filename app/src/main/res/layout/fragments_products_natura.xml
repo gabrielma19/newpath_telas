@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.user.newpath.fragment.fragments_products_natura">
+    tools:context="com.example.user.newpath.fragment.ProductsNatura">
 
     <LinearLayout
         android:id="@+id/produtcs_header"

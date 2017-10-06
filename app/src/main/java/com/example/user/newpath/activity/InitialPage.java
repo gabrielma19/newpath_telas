@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.user.newpath.R;
+import com.example.user.newpath.helper.Preferences;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -106,7 +107,7 @@ public class InitialPage extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    initApp();
+                    openDashboard();
                 }
             }
         });
@@ -116,6 +117,21 @@ public class InitialPage extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
+    }
+
+//    public void skipPrimeiroAcesso() {
+//        Preferences preferences = new Preferences(InitialPage.this);
+//        if (preferences.getKey() != -1){
+//            openDashboard();
+//        }else {
+//            initApp();
+//        }
+//    }
+
+    public void openDashboard() {
+        Intent intent = new Intent(InitialPage.this, ResultWheelsOfLife.class);
+        startActivity(intent);
+        finish();
     }
 
     private void singUp(){
