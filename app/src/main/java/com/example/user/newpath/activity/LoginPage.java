@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.user.newpath.DAO.FirebaseConfig;
 import com.example.user.newpath.R;
+import com.example.user.newpath.fragment.ChallengeToday;
 import com.example.user.newpath.helper.Preferences;
 import com.example.user.newpath.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -54,6 +55,7 @@ public class LoginPage extends AppCompatActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 loginWithEmail();
             }
         });
@@ -77,7 +79,7 @@ public class LoginPage extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    openNextView();
+                    skipPrimeiroAcesso();
                     Toast.makeText(LoginPage.this, "Login Efetuado Com Sucesso", Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(LoginPage.this, "Usuario ou senha Invalido", Toast.LENGTH_SHORT).show();
@@ -86,6 +88,21 @@ public class LoginPage extends AppCompatActivity {
         });
 
     }
+
+    public void skipPrimeiroAcesso() {
+        Preferences preferences = new Preferences(LoginPage.this);
+        if (preferences.getKey() != -1){
+            openDashboard();
+        }else {
+            openNextView();
+        }
+    }
+    public void openDashboard() {
+        Intent intent = new Intent(LoginPage.this, ResultWheelsOfLife.class);
+        startActivity(intent);
+        finish();
+    }
+
     public void openNextView(){
         Intent intent = new Intent(LoginPage.this, WheelsOfLife.class);
         startActivity(intent);

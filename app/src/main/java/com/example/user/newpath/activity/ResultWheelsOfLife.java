@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.user.newpath.R;
 import com.example.user.newpath.fragment.DashboardUser;
 import com.example.user.newpath.fragment.UserProfile;
+import com.example.user.newpath.helper.Preferences;
 import com.example.user.newpath.model.Itens;
 
 import java.util.ArrayList;
@@ -51,7 +52,15 @@ public class ResultWheelsOfLife extends AppCompatActivity {
         }
     }
 
+    public void salvaPrimeiroAcesso () {
+        Preferences preferences = new Preferences(ResultWheelsOfLife.this);
+        if (preferences.getKey() == -1){
+            preferences.salvarPrimeiroAcesso(1);
+        }
+    }
+
     public void startDashboard() {
+        salvaPrimeiroAcesso ();
         Intent intent = new Intent(ResultWheelsOfLife.this, UserProfile.class);
         startActivity(intent);
     }

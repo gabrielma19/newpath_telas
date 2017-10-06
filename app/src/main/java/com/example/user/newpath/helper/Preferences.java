@@ -22,10 +22,20 @@ public class Preferences {
         preferences = context.getSharedPreferences(NOME_ARQUIVO, MODE);
         editor = preferences.edit();
     }
+
     public void salvarUsuarioPref (String identificadorUsuario, String nomeUsuario){
         editor.putString(CHAVE_IDENTIFICADOR, identificadorUsuario);
         editor.putString(CHAVE_NOME, nomeUsuario);
         editor.commit();
+    }
+
+    public void salvarPrimeiroAcesso(int chaveAcesso) {
+        editor.putInt("FIRST_ACCESS", chaveAcesso);
+        editor.commit();
+    }
+
+    public int getKey (){
+        return preferences.getInt("FIRST_ACCESS", -1);
     }
 
     public String getIdentificador (){
@@ -35,5 +45,8 @@ public class Preferences {
     public String getNome (){
         return preferences.getString(CHAVE_NOME, null);
     }
+
+
+
 
 }

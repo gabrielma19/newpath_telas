@@ -346,7 +346,7 @@
             android:paddingBottom="15dp"
             android:paddingTop="15dp"
             android:textSize="17sp"
-            android:text="Finalizar Desafio"
+            android:text="Iniciar Desafio"
             android:textColor="#FFF" />
 
     </LinearLayout>

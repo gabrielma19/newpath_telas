@@ -3,6 +3,7 @@ package com.example.user.newpath.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,16 @@ import android.widget.TextView;
 
 import com.example.user.newpath.R;
 import com.example.user.newpath.model.Challenge;
+import com.example.user.newpath.model.ItensChallenge;
+import com.example.user.newpath.request.RequestChallenge;
+
+import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class ChallengeToday extends Fragment {
@@ -22,6 +33,7 @@ public class ChallengeToday extends Fragment {
     private TextView validation_today;
     private TextView value_today;
     private TextView bonus_today;
+    private ArrayList<ItensChallenge> desafios;
 
 
 
@@ -35,7 +47,29 @@ public class ChallengeToday extends Fragment {
 
         initViews(view);
 
+
         return view;
+    }
+
+    private void makeRequest(){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://natura-challenge.firebaseio.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        RequestChallenge service = retrofit.create(RequestChallenge.class);
+
+        service.getChallenges().enqueue(new Callback<ArrayList<ItensChallenge>>() {
+            public void onResponse(Call<ArrayList<ItensChallenge>> call, Response<ArrayList<ItensChallenge>> response) {
+                desafios= response.body();
+                setValues();
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<ItensChallenge>> call, Throwable t) {
+                Log.d("Error", t.getMessage());
+            }
+        });
     }
 
     protected void initViews(View view) {
@@ -47,13 +81,22 @@ public class ChallengeToday extends Fragment {
         validation_today = (TextView)view.findViewById(R.id.txt_validation_time_challenge_today);
         value_today =(TextView)view.findViewById(R.id.txt_value_challenge_today);
 
-        setValues();
+        makeRequest();
+
 
     }
 
     private void setValues() {
-        //TODO
-        label_today.setText(Challenge.instance().getLabel());
+        if (desafios == null)
+            return;
+
+        label_today.setText(desafios.get(0).getLabel());
+        title_today.setText(desafios.get(0).getTitle());
+        description_today.setText(desafios.get(0).getDescripton());
+        location_today.setText(desafios.get(0).getWhere());
+        time_today.setText(desafios.get(0).getTime());
+        validation_today.setText(desafios.get(0).getValidation());
+        value_today.setText(desafios.get(0).getValue());
 
     }
 }

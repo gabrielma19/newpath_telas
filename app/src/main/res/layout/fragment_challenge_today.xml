@@ -1,306 +1,316 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackgroundForm"
+    android:fillViewport="true"
     tools:context="com.example.user.newpath.fragment.ChallengeToday">
-
-
     <LinearLayout
-        android:id="@+id/header_challenge_today"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingTop="10dp"
-        android:gravity="center"
-        android:background="@drawable/gradient_background">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="140dp"
-            android:layout_height="50sp"
-            android:layout_marginRight="80dp"
-            android:paddingBottom="10dp"
-            android:src="@drawable/logo_sup_w" />
+        <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
+
+
+            <LinearLayout
+                android:id="@+id/header_challenge_today"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:gravity="center"
+                android:background="@drawable/gradient_background">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="140dp"
+                    android:layout_height="50sp"
+                    android:layout_marginRight="80dp"
+                    android:paddingBottom="10dp"
+                    android:src="@drawable/logo_sup_w" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Desafio do dia"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFF"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/challenge_today_background"
+                android:background="@drawable/challenge_today"
+                android:layout_width="0dp"
+                android:layout_height="225dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/header_challenge_today"/>
+
+            <android.support.constraint.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline_toda_left"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <android.support.constraint.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline_toda_right"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <LinearLayout
+                android:id="@+id/share_box"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="@id/guideline_toda_left"
+                app:layout_constraintRight_toRightOf="@id/guideline_toda_right"
+                app:layout_constraintTop_toBottomOf="@+id/challenge_today_background"
+                app:layout_constraintBottom_toBottomOf="@+id/challenge_today_background"
+                tools:layout_editor_absoluteX="0dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_label_challenge_today"
+                        android:text="Desafio do PicNic"
+                        android:textSize="14sp"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_title_challenge_today"
+                        android:text="Desafio Xablaus"
+                        android:textColor="@color/colorFontPrincipal"
+                        android:textStyle="bold"
+                        android:textSize="17sp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="10dp"/>
+                    <LinearLayout
+                        android:layout_width="50dp"
+                        android:layout_height="3dp"
+                        android:background="@color/colorFontPrincipal"
+                        android:layout_marginLeft="15dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_description_challenge_today"
+                        android:text="teste02"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView40"
+                        android:text="@string/traco_2"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="@color/com_facebook_button_login_silver_background_color_pressed"
+                        android:textSize="22sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+            android:id="@+id/challenge_today_box"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Desafio do dia"
-            android:paddingRight="15dp"
-            android:paddingBottom="10dp"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            android:textColor="#FFF"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:id="@+id/challenge_today_background"
-        android:background="@drawable/challenge_today"
-        android:layout_width="0dp"
-        android:layout_height="225dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header_challenge_today"/>
-
-    <android.support.constraint.Guideline
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/guideline_toda_left"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
-
-    <android.support.constraint.Guideline
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/guideline_toda_right"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
-
-    <LinearLayout
-        android:id="@+id/share_box"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:orientation="vertical"
-        app:layout_constraintLeft_toLeftOf="@id/guideline_toda_left"
-        app:layout_constraintRight_toRightOf="@id/guideline_toda_right"
-        app:layout_constraintTop_toBottomOf="@+id/challenge_today_background"
-        app:layout_constraintBottom_toBottomOf="@+id/challenge_today_background"
-        tools:layout_editor_absoluteX="0dp">
-
-        <LinearLayout
             android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:weightSum="1"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_toda_left"
+            app:layout_constraintRight_toRightOf="@id/guideline_toda_right"
+            app:layout_constraintTop_toBottomOf="@id/share_box">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txt_label_challenge_today"
-                android:text="Desafio do PicNic"
-                android:textSize="14sp"
-                android:textColor="#000"
-                android:textStyle="bold"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="15dp"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txt_title_challenge_today"
-                android:text="Desafio Xablaus"
-                android:textColor="@color/colorFontPrincipal"
-                android:textStyle="bold"
-                android:textSize="17sp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="10dp"/>
-            <LinearLayout
-                android:layout_width="50dp"
-                android:layout_height="3dp"
-                android:background="@color/colorFontPrincipal"
-                android:layout_marginLeft="15dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txt_description_challenge_today"
-                android:text="teste02"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView40"
-                android:text="@string/traco_2"
-                android:layout_marginLeft="15dp"
-                android:textColor="@color/com_facebook_button_login_silver_background_color_pressed"
-                android:textSize="22sp"/>
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/challenge_today_box"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/share_box"
-        app:layout_constraintLeft_toLeftOf="@id/guideline_toda_left"
-        app:layout_constraintRight_toRightOf="@id/guideline_toda_right"
-        android:weightSum="1">
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFF"
-            android:layout_weight="0.16">
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView28"
-                    android:text="Local"
-                    android:textColor="@color/colorFontPrincipal"
-                    android:textStyle="bold"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="110dp"
-                    android:lines="1"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView29"
-                    android:layout_gravity="center"
-                    android:text="Prazo"
-                    android:textColor="@color/colorFontPrincipal"
-                    android:textStyle="bold"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_location_challenge_today"
-                    android:text="teste03"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="100dp"
-                    android:lines="1"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_time_challenge_today"
-                    android:text="teste04"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView32"
-                    android:text="Validação"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="83dp"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/colorFontPrincipal"
-                    android:textStyle="bold"
-                    android:lines="1"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView33"
-                    android:textColor="@color/colorFontPrincipal"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:text="Validaçao"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_validation_challenge_today"
-                    android:text="teste05"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="100dp"
-                    android:lines="1"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_validation_time_challenge_today"
-                    android:text="24Horas"/>
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView36"
-                    android:text="Valor"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="113dp"
-                    android:layout_marginTop="10dp"
-                    android:textColor="@color/colorFontPrincipal"
-                    android:textStyle="bold"
-                    android:lines="1"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView37"
-                    android:textColor="@color/colorFontPrincipal"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:text="Bônus"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_value_challenge_today"
-                    android:text="teste07"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="100dp"
-                    android:lines="1"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_bonus_challenge_today"
-                    android:text="Compartilhar com um amigo."/>
-            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:background="@color/colorFontPrincipal"
-                android:layout_marginTop="10dp"/>
+                android:layout_height="wrap_content"
+                android:layout_weight="0.16"
+                android:background="#FFF"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="110dp"
+                        android:lines="1"
+                        android:text="Local"
+                        android:textColor="@color/colorFontPrincipal"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Prazo"
+                        android:textColor="@color/colorFontPrincipal"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_location_challenge_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="60dp"
+                        android:lines="1"
+                        android:text="Voce escolhe" />
+
+                    <TextView
+                        android:id="@+id/txt_time_challenge_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="teste04" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="83dp"
+                        android:layout_marginTop="10dp"
+                        android:lines="1"
+                        android:text="Validação"
+                        android:textColor="@color/colorFontPrincipal"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Validaçao"
+                        android:textColor="@color/colorFontPrincipal"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_validation_challenge_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="95dp"
+                        android:lines="1"
+                        android:text="24horas" />
+
+                    <TextView
+                        android:id="@+id/txt_validation_time_challenge_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="24Horas" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="113dp"
+                        android:layout_marginTop="10dp"
+                        android:lines="1"
+                        android:text="Valor"
+                        android:textColor="@color/colorFontPrincipal"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Bônus"
+                        android:textColor="@color/colorFontPrincipal"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_value_challenge_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="100dp"
+                        android:lines="1"
+                        android:text="teste07" />
+
+                    <TextView
+                        android:id="@+id/txt_bonus_challenge_today"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Compartilhar com um amigo." />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorFontPrincipal" />
+            </LinearLayout>
+
         </LinearLayout>
-        <Button
-            android:layout_gravity="center"
-            android:id="@+id/btn_accepted_challenge_today"
-            android:layout_width="201dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@drawable/button_bg_radius"
-            android:text="Aceitar Desafio :)"
-            android:textColor="#FFF"/>
-    </LinearLayout>
 
+        </android.support.constraint.ConstraintLayout>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
+</ScrollView>
