@@ -29,7 +29,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ProductsNatura extends Fragment {
     private ListView listView;
     private TextView label;
-    private TextView socore;
+    private TextView score;
     private ArrayList<Products> productsArrayList;
     private View view;
     @Nullable
@@ -64,8 +64,9 @@ public class ProductsNatura extends Fragment {
         });
     }
     protected void initViews(View view) {
-        label = (TextView)view.findViewById(R.id.produtcs_description) ;
-        socore = (TextView)view.findViewById(R.id.produtcs_score);
+        score = (TextView)view.findViewById(R.id.produtcs_score);
+        listView = (ListView)view.findViewById(R.id.list_products);
+        label = (TextView)view.findViewById(R.id.produtcs_description);
         makeRequest();
 
     }

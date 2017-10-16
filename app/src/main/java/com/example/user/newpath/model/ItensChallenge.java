@@ -25,6 +25,8 @@ public class ItensChallenge {
     private  String categoria;
     @SerializedName("validation")
     private String validation;
+    @SerializedName("descripton")
+    private String descripton;
 
 
     public String getCategoria() {
@@ -34,9 +36,6 @@ public class ItensChallenge {
     public void setCategoria(String categoria) {
         this.categoria = categoria;
     }
-
-    @SerializedName("description")
-    private String descripton;
 
     public ItensChallenge() {
     }

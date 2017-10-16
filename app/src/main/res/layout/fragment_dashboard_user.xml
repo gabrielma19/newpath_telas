@@ -171,7 +171,7 @@
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2503pts"/>
+                    android:text="0pts"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -358,7 +358,7 @@
         android:background="@color/colorBackgroundForm"
         android:orientation="vertical"
         android:gravity="center|top"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -376,7 +376,7 @@
         <LinearLayout
             android:id="@+id/description_challenge"
             android:layout_width="300dp"
-            android:layout_height="250dp"
+            android:layout_height="320dp"
             android:gravity="center|top"
             android:background="#fff"
             android:orientation="vertical">
@@ -402,12 +402,12 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_margin="10dp"
-                android:orientation="horizontal">
+                android:orientation="vertical">
                 <TextView
                     android:id="@+id/label_descricao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Descrição:................"
+                    android:text="Descrição:"
                     android:textColor="@color/colorFontPrincipal"/>
                 <TextView
                     android:id="@+id/txt_info_descricao"
@@ -475,14 +475,21 @@
 
 
         </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorFontPrincipal"
+            android:textSize="35sp"/>
 
-        <ImageView
-            android:id="@+id/close_info"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="30dp"
-            android:layout_marginTop="10dp"
-            app:srcCompat="@drawable/close_icon" />
+        <!--<ImageView-->
+            <!--android:id="@+id/close_info"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginBottom="30dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--app:srcCompat="@drawable/close_icon" />-->
 
     </LinearLayout>
 
@@ -544,7 +551,7 @@
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="10dp"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/box_finalizar_desafio"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@+id/guideline_left"

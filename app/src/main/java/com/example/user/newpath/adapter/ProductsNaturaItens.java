@@ -51,7 +51,7 @@ public class ProductsNaturaItens extends BaseAdapter {
         if (view == null){
 
             LayoutInflater layoutInflater = LayoutInflater.from(context);
-            view = layoutInflater.inflate(R.layout.adpter_challenge_list, null);
+            view = layoutInflater.inflate(R.layout.adapter_products_natura, null);
 
             TextView produtcs_description = (TextView)view.findViewById(R.id.produtcs_description);
             TextView produtcs_score = (TextView)view.findViewById(R.id.produtcs_score);
@@ -73,7 +73,7 @@ public class ProductsNaturaItens extends BaseAdapter {
         Products productsNatura = products.get(position);
 
         viewHolder.produtcs_description.setText(productsNatura.getName());
-        viewHolder.produtcs_score.setText(productsNatura.getScore());
+        viewHolder.produtcs_score.setText("" + productsNatura.getScore());
 
     }
 

@@ -1,5 +1,7 @@
 package com.example.user.newpath.model;
 
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by jussi on 10/4/17.
  */
@@ -8,15 +10,25 @@ public class Challenge {
 
     private static Challenge challenge;
 
+    @SerializedName("more")
     private String mais;
+    @SerializedName("value")
     private String valor;
+    @SerializedName("where")
     private String local;
+    @SerializedName("label")
     private String label;
+    @SerializedName("time")
     private String tempo;
+    @SerializedName("status")
     private String status;
+    @SerializedName("title")
     private String titulo;
+    @SerializedName("validation")
     private String validacao;
+    @SerializedName("categoria")
     private String categoria;
+    @SerializedName("descripton")
     private String descricao;
 
     public static Challenge instance(){

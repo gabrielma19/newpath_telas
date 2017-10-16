@@ -5,17 +5,32 @@
     android:layout_height="match_parent"
     tools:context="com.example.user.newpath.fragment.ProductsNatura">
 
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/produtcs_list_left"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/produtcs_list_right"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
     <LinearLayout
         android:id="@+id/produtcs_header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/gradient_background"
+        android:gravity="center"
         android:orientation="horizontal"
         android:paddingTop="10dp"
-        android:gravity="center"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
 
-        android:background="@drawable/gradient_background"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         tools:layout_editor_absoluteY="0dp">
 
         <ImageView
@@ -29,33 +44,23 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Loja"
-            android:paddingRight="20dp"
             android:paddingBottom="10dp"
+            android:paddingRight="20dp"
+            android:text="Loja"
+            android:textColor="#FFF"
             android:textSize="17sp"
-            android:textStyle="bold"
-            android:textColor="#FFF"/>
+            android:textStyle="bold" />
     </LinearLayout>
+
     <ListView
+        android:id="@+id/list_products"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="@+id/produtcs_list_left"
         app:layout_constraintRight_toRightOf="@+id/produtcs_list_right"
         app:layout_constraintTop_toBottomOf="@+id/produtcs_header"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-    <android.support.constraint.Guideline
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/produtcs_list_left"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.1" />
-
-    <android.support.constraint.Guideline
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/produtcs_list_right"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.9" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>
