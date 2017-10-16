@@ -35,10 +35,15 @@ public class DashboardUser extends Fragment {
     private TextView label;
     private TextView pontos;
     private ListView listView;
-    private TextView info_local;
+
     private ImageView close_info;
-    private TextView info_categoria;
-    private TextView info_descricao;
+
+    private TextView lbl_title;
+    private TextView lbl_tempo;
+    private TextView lbl_local;
+    private TextView lbl_descricao;
+    private TextView lbl_categoria;
+
     private LinearLayout info_challenge;
     private ArrayList<ItensChallenge> desafios;
 
@@ -81,11 +86,15 @@ public class DashboardUser extends Fragment {
         label           = (TextView)view.findViewById(R.id.txt_desc_challenge_today);
         pontos          = (TextView)view.findViewById(R.id.txt_points_challenge_today);
         listView        = (ListView)view.findViewById(R.id.list_challenge);
-        info_local      = (TextView)view.findViewById(R.id.txt_info_local);
         close_info      = (ImageView)view.findViewById(R.id.close_info);
-        info_categoria  = (TextView)view.findViewById(R.id.txt_info_categoria);
-        info_descricao  = (TextView)view.findViewById(R.id.txt_info_descricao);
-        info_challenge  = (LinearLayout)view.findViewById(R.id.info_challenge);
+
+        lbl_title      = (TextView)view.findViewById(R.id.label_title);
+        lbl_tempo      = (TextView)view.findViewById(R.id.txt_info_tempo);
+        lbl_local      = (TextView)view.findViewById(R.id.txt_info_local);
+        lbl_descricao  = (TextView)view.findViewById(R.id.txt_info_descricao);
+        lbl_categoria  = (TextView)view.findViewById(R.id.txt_info_categoria);
+
+        info_challenge = (LinearLayout)view.findViewById(R.id.info_challenge);
 
         close_info.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,12 +118,17 @@ public class DashboardUser extends Fragment {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int index, long l) {
             ItensChallenge desafio = desafios.get(index);
-            info_challenge.setVisibility(View.VISIBLE);
-            listView.setVisibility(View.GONE);
 
-            info_local.setText(desafio.getWhere());
-            info_categoria.setText(desafio.getCategoria());
-            info_descricao.setText(desafio.getDescripton());
+            listView.setVisibility(View.GONE);
+            info_challenge.setVisibility(View.VISIBLE);
+
+
+            lbl_title.setText(desafio.getTitle());
+            lbl_tempo.setText(desafio.getTime());
+            lbl_local.setText(desafio.getWhere());
+            lbl_descricao.setText(desafio.getDescripton());
+            lbl_categoria.setText(desafio.getCategoria());
+
             Toast.makeText(getActivity(), desafio.getTitle(), Toast.LENGTH_SHORT).show();
         }
     };

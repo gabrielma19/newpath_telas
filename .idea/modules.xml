@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NewPath.iml" filepath="$PROJECT_DIR$/NewPath.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/newpath_telas.iml" filepath="$PROJECT_DIR$/newpath_telas.iml" />
     </modules>
   </component>
 </project>

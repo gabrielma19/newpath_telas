@@ -368,42 +368,110 @@
         <ImageView
             android:layout_marginTop="50dp"
             android:id="@+id/img_info"
-            android:layout_width="131dp"
-            android:layout_height="112dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginBottom="30dp"
             app:srcCompat="@drawable/icon_info" />
 
         <LinearLayout
             android:id="@+id/description_challenge"
             android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_height="250dp"
             android:gravity="center|top"
             android:background="#fff"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/txt_info_categoria"
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TITULO DESAFIO" />
+                android:gravity="center"
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/label_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textColor="@color/colorFontPrincipal"/>
+            </LinearLayout>
             <TextView
                 android:layout_width="30dp"
                 android:layout_height="3dp"
                 android:background="#000"/>
-
-            <TextView
-                android:id="@+id/txt_info_descricao"
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="testes" />
-
-            <TextView
-                android:id="@+id/txt_info_local"
-                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/label_descricao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Descrição:................"
+                    android:textColor="@color/colorFontPrincipal"/>
+                <TextView
+                    android:id="@+id/txt_info_descricao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TITULO DESAFIO" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Em casa"/>
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/label_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Categoria:.........................."
+                    android:textColor="@color/colorFontPrincipal"/>
+                <TextView
+                    android:id="@+id/txt_info_categoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carreira" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/label_local"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Local:......................."
+                    android:textColor="@color/colorFontPrincipal" />
+
+                <TextView
+                    android:id="@+id/txt_info_local"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Você Escolhe" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/label_tempo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tempo:.............................."
+                    android:textColor="@color/colorFontPrincipal"/>
+                <TextView
+                    android:id="@+id/txt_info_tempo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24Horas" />
+            </LinearLayout>
+
 
 
         </LinearLayout>
@@ -471,16 +539,18 @@
     </LinearLayout>
 
     <ListView
-        android:visibility="visible"
         android:id="@+id/list_challenge"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/box_finalizar_desafio"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
         app:layout_constraintRight_toLeftOf="@+id/guideline_right"
-        app:layout_constraintTop_toBottomOf="@+id/challenge_box" />
+        app:layout_constraintTop_toBottomOf="@+id/challenge_box"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </android.support.constraint.ConstraintLayout>

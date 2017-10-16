@@ -83,7 +83,7 @@ public class LoginPage extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    openDashboard();
+                    openNextView();
                     Toast.makeText(LoginPage.this, "Login Efetuado Com Sucesso", Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(LoginPage.this, "Usuario ou senha Invalido", Toast.LENGTH_SHORT).show();

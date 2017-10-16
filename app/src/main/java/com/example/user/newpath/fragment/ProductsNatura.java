@@ -10,9 +10,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.user.newpath.R;
-import com.example.user.newpath.adapter.ChallengeAdapter;
+import com.example.user.newpath.adapter.ProductsNaturaItens;
 import com.example.user.newpath.model.Products;
 import com.example.user.newpath.request.RequestProducts;
 
@@ -58,7 +59,7 @@ public class ProductsNatura extends Fragment {
 
             @Override
             public void onFailure(Call<ArrayList<Products>> call, Throwable t) {
-
+                Toast.makeText(getContext(), "FAIL", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -67,23 +68,11 @@ public class ProductsNatura extends Fragment {
         socore = (TextView)view.findViewById(R.id.produtcs_score);
         makeRequest();
 
-
     }
     private void createList(){
         if(productsArrayList == null)
             return;
-
-//        listView.setOnItemClickListener(listItemclick);
-//        listView.setAdapter(new ChallengeAdapter(productsArrayList, getActivity()));
+        listView.setAdapter(new ProductsNaturaItens(productsArrayList, getActivity()));
     }
-
-    private AdapterView.OnItemClickListener listItemclick = new AdapterView.OnItemClickListener() {
-        @Override
-        public void onItemClick(AdapterView<?> adapterView, View view, int index, long l) {
-            Products products = productsArrayList.get(index);
-            label.setText(products.getName());
-            socore.setText(products.getScore());
-        }
-    };
 
 }

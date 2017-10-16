@@ -12,7 +12,7 @@ import retrofit2.http.GET;
  */
 
 public interface RequestProducts {
-    @GET("/productList")
+    @GET("/productList.json")
     Call<ArrayList<Products>> getProducts();
 
 }

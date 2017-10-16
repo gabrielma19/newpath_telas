@@ -18,13 +18,13 @@ import java.util.ArrayList;
  * Created by jussi on 10/4/17.
  */
 
-public class ProductsNatura extends BaseAdapter {
+public class ProductsNaturaItens extends BaseAdapter {
 
     private ArrayList<Products> products;
     private LayoutInflater layoutInflater;
     private Context context;
 
-    public  ProductsNatura(ArrayList<Products> products, Context context){
+    public ProductsNaturaItens(ArrayList<Products> products, Context context){
         this.products = products;
         this.context = context;
     }
