@@ -518,7 +518,7 @@
                 <TextView
                     android:id="@+id/conclued_title"
                     android:layout_width="wrap_content"
-                    android:layout_marginLeft="15dp"
+                    android:textSize="17sp"
                     android:textColor="@color/colorFontPrincipal"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -545,6 +545,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="10dp"
+                        android:textSize="15sp"
                         android:textColor="@color/colorFontPrincipal"
                         android:text="DESCRIÇÃO" />
                 </LinearLayout>
@@ -643,6 +644,7 @@
             android:layout_height="wrap_content"
             android:paddingBottom="15dp"
             android:paddingTop="15dp"
+            android:visibility="visible"
             android:textSize="17sp"
             android:text="Iniciar Desafio"
             android:textColor="#FFF" />

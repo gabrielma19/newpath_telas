@@ -101,6 +101,7 @@ public class DashboardUser extends Fragment {
     }
 
     protected void initViews(final View view){
+//        verifyChallenge();
 
         data            = (TextView)view.findViewById(R.id.txt_date_challenge_today);
         label           = (TextView)view.findViewById(R.id.txt_desc_challenge_today);
@@ -117,7 +118,6 @@ public class DashboardUser extends Fragment {
 
         btn_finalizar   = (TextView)view.findViewById(R.id.btn_finalizar_desafio);
 
-
         conclued_title           = (TextView)view.findViewById(R.id.conclued_title);
         conclued_local           = (TextView)view.findViewById(R.id.conclued_local);
         conclued_tempo           = (TextView)view.findViewById(R.id.conclued_tempo);
@@ -130,17 +130,10 @@ public class DashboardUser extends Fragment {
 
         click_finalizar = (LinearLayout)view.findViewById(R.id.box_finalizar_desafio);
 
-        if(User.instance().getChallengeStatus() == false){
-            btn_finalizar.setText("Iniar Desafio");
-        }else {
-            btn_finalizar.setText("Finalizar Desafio");
-        }
 
         click_finalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                User user = new User();
-
                 if(User.instance().getChallengeStatus() == false){
 
                     AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
@@ -166,12 +159,20 @@ public class DashboardUser extends Fragment {
                     User.instance().setChallengeStatus(false);
                     btn_finalizar.setText("Inicar Desafio");
 
+                    Animation sliceIn = AnimationUtils.loadAnimation(getContext(), R.anim.slide_in);
+                    conclued_challenge.startAnimation(sliceIn);
+
                     conclued_challenge.setVisibility(View.VISIBLE);
                     listView.setVisibility(View.GONE);
                     click_finalizar.setVisibility(View.GONE);
 
-                    setChallengeConclued();
+                    int pontos  = User.instance().getScore() + 100;
 
+                    User.instance().setScore(pontos);
+
+                    txt_pontos_total.setText(User.instance().getScore() + "pts");
+
+                    setChallengeConclued();
                 }
             }
         });
@@ -179,8 +180,8 @@ public class DashboardUser extends Fragment {
         close_challenge_conclued.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Animation sliceIn = AnimationUtils.loadAnimation(getContext(), R.anim.slide_out);
-                conclued_challenge.startAnimation(sliceIn);
+                Animation sliceOut = AnimationUtils.loadAnimation(getContext(), R.anim.slide_out);
+                conclued_challenge.startAnimation(sliceOut);
 
                 new android.os.Handler().postDelayed(
                         new Runnable() {
@@ -195,9 +196,9 @@ public class DashboardUser extends Fragment {
         close_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Animation sliceIn = AnimationUtils.loadAnimation(getContext(), R.anim.slide_out);
+                Animation sliceOut = AnimationUtils.loadAnimation(getContext(), R.anim.slide_out);
 
-                info_challenge.startAnimation(sliceIn);
+                info_challenge.startAnimation(sliceOut);
 
                 new android.os.Handler().postDelayed(
                     new Runnable() {
@@ -244,8 +245,13 @@ public class DashboardUser extends Fragment {
             Toast.makeText(getActivity(), desafio.getTitle(), Toast.LENGTH_SHORT).show();
         }
     };
-
+    private void verifyChallenge() {
+        if(User.instance().getChallengeStatus() != false){
+            btn_finalizar.setText("Finalizar Desafio");
+        }
+    }
     private void setChallengeConclued() {
+
         conclued_title.setText(desafios.get(0).getTitle());
         conclued_description.setText(desafios.get(0).getDescripton());
         conclued_categoria.setText(desafios.get(0).getCategoria());
