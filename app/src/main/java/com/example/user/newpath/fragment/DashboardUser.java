@@ -50,7 +50,7 @@ public class DashboardUser extends Fragment {
     private TextView btn_finalizar;
     private TextView lbl_descricao;
     private TextView lbl_categoria;
-
+    private TextView txt_pontos_total;
     private LinearLayout click_finalizar;
     private ScrollView info_challenge;
 
@@ -113,6 +113,7 @@ public class DashboardUser extends Fragment {
         lbl_local       = (TextView)view.findViewById(R.id.txt_info_local);
         lbl_descricao   = (TextView)view.findViewById(R.id.txt_info_descricao);
         lbl_categoria   = (TextView)view.findViewById(R.id.txt_info_categoria);
+        txt_pontos_total = (TextView)view.findViewById(R.id.txt_pontos_total);
 
         btn_finalizar   = (TextView)view.findViewById(R.id.btn_finalizar_desafio);
 

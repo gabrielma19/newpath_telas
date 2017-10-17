@@ -599,15 +599,15 @@
                         android:textColor="@color/colorFontPrincipal"
                         android:text="TEMPO" />
                 </LinearLayout>
-                <ImageView
-                    android:layout_marginTop="10dp"
-                    android:id="@+id/close_warning_challenge_conclued"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginBottom="30dp"
-                    android:tint="@color/colorFontPrincipal"
-                    app:srcCompat="@drawable/icon_close_64dp" />
             </LinearLayout>
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:id="@+id/close_warning_challenge_conclued"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="30dp"
+                android:tint="@color/colorFontPrincipal"
+                app:srcCompat="@drawable/icon_close_64dp" />
         </LinearLayout>
 
     </ScrollView>
