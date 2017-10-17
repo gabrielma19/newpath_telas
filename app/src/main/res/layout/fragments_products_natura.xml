@@ -52,6 +52,16 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <ProgressBar
+        android:id="@+id/progress_products"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="259dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="@+id/produtcs_list_right"
+        app:layout_constraintLeft_toLeftOf="@+id/produtcs_list_left" />
+
     <ListView
         android:id="@+id/list_products"
         android:layout_width="0dp"

@@ -76,7 +76,7 @@ public class ProductsNaturaItens extends BaseAdapter {
 
         viewHolder.produtcs_description.setText(productsNatura.getName());
         viewHolder.produtcs_score.setText("" + productsNatura.getScore());
-//        viewHolder.img_product.setImageBitmap(Picasso.with(context).load(productsNatura.getImageUrl()).into(img_product));
+        Picasso.with(context).load(productsNatura.getImageUrl()).into(viewHolder.img_product);
 
     }
 

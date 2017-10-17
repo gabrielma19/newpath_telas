@@ -7,4 +7,5 @@
     <color name="colorFontPrincipal">#FC9555</color>
     <color name="colorBackgroundForm">#f5f7f4</color>
     <color name="colorFontSecondary">#8E8E8E</color>
+    <color name="colorButtonOff">#c0c0c0</color>
 </resources>

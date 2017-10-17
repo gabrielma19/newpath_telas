@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.user.newpath.R;
@@ -25,14 +26,16 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ChallengeToday extends Fragment {
 
-    private TextView label_today;
-    private TextView title_today;
-    private TextView description_today;
-    private TextView location_today;
+
     private TextView time_today;
-    private TextView validation_today;
     private TextView value_today;
     private TextView bonus_today;
+    private TextView label_today;
+    private TextView title_today;
+    private TextView location_today;
+    private ProgressBar progress_bar;
+    private TextView validation_today;
+    private TextView description_today;
     private ArrayList<ItensChallenge> desafios;
 
 
@@ -73,30 +76,30 @@ public class ChallengeToday extends Fragment {
     }
 
     protected void initViews(View view) {
-        label_today = (TextView)view.findViewById(R.id.txt_label_challenge_today);
-        title_today = (TextView)view.findViewById(R.id.txt_title_challenge_today);
-        description_today = (TextView)view.findViewById(R.id.txt_description_challenge_today);
-        location_today = (TextView)view.findViewById(R.id.txt_location_challenge_today);
-        time_today = (TextView)view.findViewById(R.id.txt_time_challenge_today);
-        validation_today = (TextView)view.findViewById(R.id.txt_validation_time_challenge_today);
-        value_today =(TextView)view.findViewById(R.id.txt_value_challenge_today);
+
+        time_today          = (TextView)view.findViewById(R.id.txt_time_challenge_today);
+        label_today         = (TextView)view.findViewById(R.id.txt_label_challenge_today);
+        title_today         = (TextView)view.findViewById(R.id.txt_title_challenge_today);
+        value_today         = (TextView)view.findViewById(R.id.txt_value_challenge_today);
+        progress_bar        = (ProgressBar)view.findViewById(R.id.progress_challenge_today);
+        location_today      = (TextView)view.findViewById(R.id.txt_location_challenge_today);
+        description_today   = (TextView)view.findViewById(R.id.txt_description_challenge_today);
+        validation_today    = (TextView)view.findViewById(R.id.txt_validation_time_challenge_today);
 
         makeRequest();
-
-
     }
 
     private void setValues() {
         if (desafios == null)
             return;
+        progress_bar.setVisibility(View.GONE);
 
+        time_today.setText(desafios.get(0).getTime());
         label_today.setText(desafios.get(0).getLabel());
         title_today.setText(desafios.get(0).getTitle());
-        description_today.setText(desafios.get(0).getDescripton());
-        location_today.setText(desafios.get(0).getWhere());
-        time_today.setText(desafios.get(0).getTime());
-        validation_today.setText(desafios.get(0).getValidation());
         value_today.setText(desafios.get(0).getValue());
-
+        location_today.setText(desafios.get(0).getWhere());
+        validation_today.setText(desafios.get(0).getValidation());
+        description_today.setText(desafios.get(0).getDescripton());
     }
 }

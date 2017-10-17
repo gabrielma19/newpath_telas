@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +34,7 @@ public class ProductsNatura extends Fragment {
     private TextView label;
     private TextView score;
     private ListView listView;
+    private ProgressBar progress_bar;
     private ArrayList<Products> productsArrayList;
     @Nullable
     @Override
@@ -74,6 +76,7 @@ public class ProductsNatura extends Fragment {
         score       = (TextView)view.findViewById(R.id.produtcs_score);
         img         = (ImageView)view.findViewById(R.id.produtcs_image);
         label       = (TextView)view.findViewById(R.id.produtcs_description);
+        progress_bar= (ProgressBar)view.findViewById(R.id.progress_products);
 
         makeRequest();
     }
@@ -81,6 +84,7 @@ public class ProductsNatura extends Fragment {
         if(productsArrayList == null)
             return;
         listView.setAdapter(new ProductsNaturaItens(productsArrayList, getActivity()));
+        progress_bar.setVisibility(View.GONE);
     }
 
 }
