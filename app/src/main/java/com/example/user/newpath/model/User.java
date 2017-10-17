@@ -23,6 +23,9 @@ public class User {
     public String aniversario;
     public String email;
     public String senha;
+    public int    score;
+    public int    numberChallenge;
+    private boolean challengeStatus;
 
         public User() {
 
@@ -52,6 +55,17 @@ public class User {
             hashMapUser.put("senha", getSenha());
             return hashMapUser;
         }
+        public int getNumberChallenge () {return numberChallenge;}
+
+        public void setNumberChallenge (int numberChallenge) {this.numberChallenge = numberChallenge; }
+
+        public int getScore () { return score; }
+
+        public void setScore(int score) {this.score = score;}
+
+        public boolean getChallengeStatus() { return challengeStatus; }
+
+        public void setChallengeStatus(boolean challengeStatus) {this.challengeStatus = challengeStatus;}
 
         public String getId() {
             return id;

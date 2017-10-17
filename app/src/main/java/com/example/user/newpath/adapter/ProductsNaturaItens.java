@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.user.newpath.R;
 import com.example.user.newpath.model.Products;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -53,10 +54,11 @@ public class ProductsNaturaItens extends BaseAdapter {
             LayoutInflater layoutInflater = LayoutInflater.from(context);
             view = layoutInflater.inflate(R.layout.adapter_products_natura, null);
 
+            ImageView img_product = (ImageView)view.findViewById(R.id.produtcs_image);
             TextView produtcs_description = (TextView)view.findViewById(R.id.produtcs_description);
             TextView produtcs_score = (TextView)view.findViewById(R.id.produtcs_score);
 
-            viewHolder = new ViewHolder(produtcs_description, produtcs_score);
+            viewHolder = new ViewHolder(produtcs_description, produtcs_score, img_product);
             view.setTag(viewHolder);
 
         }else
@@ -74,16 +76,20 @@ public class ProductsNaturaItens extends BaseAdapter {
 
         viewHolder.produtcs_description.setText(productsNatura.getName());
         viewHolder.produtcs_score.setText("" + productsNatura.getScore());
+//        viewHolder.img_product.setImageBitmap(Picasso.with(context).load(productsNatura.getImageUrl()).into(img_product));
 
     }
 
     public class ViewHolder {
-        private TextView produtcs_description;
-        private TextView produtcs_score;
 
-        public ViewHolder(TextView produtcs_description,TextView produtcs_score) {
+        private TextView  produtcs_description;
+        private TextView  produtcs_score;
+        private ImageView img_product;
+
+        public ViewHolder(TextView produtcs_description,TextView produtcs_score, ImageView img_product) {
             this.produtcs_description  = produtcs_description;
             this.produtcs_score = produtcs_score;
+            this.img_product = img_product;
         }
     }
 

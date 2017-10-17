@@ -184,7 +184,7 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.05"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="16dp" />
+        tools:layout_editor_absoluteX="19dp" />
 
     <android.support.constraint.Guideline
         android:layout_width="wrap_content"
@@ -193,7 +193,7 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.95"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="304dp" />
+        tools:layout_editor_absoluteX="365dp" />
 
     <LinearLayout
         android:id="@+id/challenge_box"
@@ -328,6 +328,304 @@
 
     </LinearLayout>
 
+    <ScrollView
+        android:id="@+id/info_challenge"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackgroundForm"
+            android:orientation="vertical"
+            android:gravity="center|top"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:id="@+id/img_info"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/icon_information_128dp" />
+
+            <LinearLayout
+                android:id="@+id/description_challenge"
+                android:layout_width="300dp"
+                android:layout_height="320dp"
+                android:background="#fff"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/label_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textColor="@color/colorFontPrincipal" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="3dp"
+                    android:background="#000" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:textAlignment="center">
+
+                    <TextView
+                        android:id="@+id/label_descricao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Descrição:"
+                        android:textColor="@color/colorFontPrincipal" />
+
+                    <TextView
+                        android:id="@+id/txt_info_descricao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TITULO DESAFIO" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/label_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Categoria:.........................."
+                        android:textColor="@color/colorFontPrincipal" />
+
+                    <TextView
+                        android:id="@+id/txt_info_categoria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Carreira" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/label_local"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Local:......................."
+                        android:textColor="@color/colorFontPrincipal" />
+
+                    <TextView
+                        android:id="@+id/txt_info_local"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Você Escolhe" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/label_tempo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tempo:.............................."
+                        android:textColor="@color/colorFontPrincipal" />
+
+                    <TextView
+                        android:id="@+id/txt_info_tempo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="24Horas" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/close_info"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="10dp"
+                app:srcCompat="@drawable/icon_close_64dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/conclued_challenge"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBackgroundForm"
+            android:orientation="vertical"
+            android:gravity="center|top"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:id="@+id/img_congratulatons"
+                android:layout_width="131dp"
+                android:layout_height="112dp"
+                android:layout_marginBottom="10dp"
+                app:srcCompat="@drawable/circle_icon" />
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="280dp"
+                android:background="#fff"
+                android:gravity="center|top"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/conclued_title"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/colorFontPrincipal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="TITULO DESAFIO" />
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="3dp"
+                    android:background="@color/colorFontPrincipal"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Descrição:" />
+                    <TextView
+                        android:id="@+id/conclued_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/colorFontPrincipal"
+                        android:text="DESCRIÇÃO" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Categoria.................................:" />
+                    <TextView
+                        android:id="@+id/conclued_categoria"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorFontPrincipal"
+                        android:text="LOCAL" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Local.................................:" />
+                    <TextView
+                        android:id="@+id/conclued_local"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorFontPrincipal"
+                        android:text="LOCAL" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tempo.................................:" />
+                    <TextView
+                        android:id="@+id/conclued_tempo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorFontPrincipal"
+                        android:text="TEMPO" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/close_warning_challenge_conclued"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="30dp"
+                    android:tint="@color/colorFontPrincipal"
+                    app:srcCompat="@drawable/icon_close_64dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <ListView
+        android:id="@+id/list_challenge"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/box_finalizar_desafio"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@+id/challenge_box"
+        app:layout_constraintVertical_bias="0.0" />
+
     <LinearLayout
         android:id="@+id/box_finalizar_desafio"
         android:layout_width="0dp"
@@ -348,216 +646,7 @@
             android:textSize="17sp"
             android:text="Iniciar Desafio"
             android:textColor="#FFF" />
-
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/info_challenge"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/colorBackgroundForm"
-        android:orientation="vertical"
-        android:gravity="center|top"
-        android:visibility="visible"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:weightSum="1">
-
-        <ImageView
-            android:layout_marginTop="50dp"
-            android:id="@+id/img_info"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginBottom="30dp"
-            app:srcCompat="@drawable/icon_info" />
-
-        <LinearLayout
-            android:id="@+id/description_challenge"
-            android:layout_width="300dp"
-            android:layout_height="320dp"
-            android:gravity="center|top"
-            android:background="#fff"
-            android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_margin="20dp"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/label_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="-"
-                    android:textColor="@color/colorFontPrincipal"/>
-            </LinearLayout>
-            <TextView
-                android:layout_width="30dp"
-                android:layout_height="3dp"
-                android:background="#000"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_margin="10dp"
-                android:orientation="vertical">
-                <TextView
-                    android:id="@+id/label_descricao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Descrição:"
-                    android:textColor="@color/colorFontPrincipal"/>
-                <TextView
-                    android:id="@+id/txt_info_descricao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TITULO DESAFIO" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/label_category"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Categoria:.........................."
-                    android:textColor="@color/colorFontPrincipal"/>
-                <TextView
-                    android:id="@+id/txt_info_categoria"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Carreira" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/label_local"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Local:......................."
-                    android:textColor="@color/colorFontPrincipal" />
-
-                <TextView
-                    android:id="@+id/txt_info_local"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Você Escolhe" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_margin="10dp"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/label_tempo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tempo:.............................."
-                    android:textColor="@color/colorFontPrincipal"/>
-                <TextView
-                    android:id="@+id/txt_info_tempo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="24Horas" />
-            </LinearLayout>
-
-
-
-        </LinearLayout>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="X"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/colorFontPrincipal"
-            android:textSize="35sp"/>
-
-        <!--<ImageView-->
-            <!--android:id="@+id/close_info"-->
-            <!--android:layout_width="30dp"-->
-            <!--android:layout_height="30dp"-->
-            <!--android:layout_marginBottom="30dp"-->
-            <!--android:layout_marginTop="10dp"-->
-            <!--app:srcCompat="@drawable/close_icon" />-->
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/conclued_challenge"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/colorBackgroundForm"
-        android:orientation="vertical"
-        android:gravity="center|top"
-        android:visibility="gone"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:weightSum="1">
-
-        <ImageView
-            android:layout_marginTop="50dp"
-            android:id="@+id/img_congratulatons"
-            android:layout_width="131dp"
-            android:layout_height="112dp"
-            android:layout_marginBottom="30dp"
-            app:srcCompat="@drawable/circle_icon" />
-
-        <LinearLayout
-            android:layout_width="250dp"
-            android:layout_height="230dp"
-            android:gravity="center|top"
-            android:background="#fff"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TITULO DESAFIO" />
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="DESCRIÇÃO DO DESAFIO \n LOCAL \nO BJETIVO" />
-
-        </LinearLayout>
-
-        <ImageView
-            android:layout_marginTop="10dp"
-            android:id="@+id/close_warning_challenge_conclued"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="30dp"
-            app:srcCompat="@drawable/close_icon" />
-
-    </LinearLayout>
-
-    <ListView
-        android:id="@+id/list_challenge"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/box_finalizar_desafio"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline_left"
-        app:layout_constraintRight_toLeftOf="@+id/guideline_right"
-        app:layout_constraintTop_toBottomOf="@+id/challenge_box"
-        app:layout_constraintVertical_bias="0.0" />
 
 
 </android.support.constraint.ConstraintLayout>

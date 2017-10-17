@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,15 +28,18 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class ProductsNatura extends Fragment {
-    private ListView listView;
+    private View view;
+    private ImageView img;
     private TextView label;
     private TextView score;
+    private ListView listView;
     private ArrayList<Products> productsArrayList;
-    private View view;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragments_products_natura, container, false);
+
+
 
         initViews(view);
 
@@ -43,6 +47,7 @@ public class ProductsNatura extends Fragment {
     }
 
     private void makeRequest(){
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://natura-challenge.firebaseio.com/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -64,11 +69,13 @@ public class ProductsNatura extends Fragment {
         });
     }
     protected void initViews(View view) {
-        score = (TextView)view.findViewById(R.id.produtcs_score);
-        listView = (ListView)view.findViewById(R.id.list_products);
-        label = (TextView)view.findViewById(R.id.produtcs_description);
-        makeRequest();
 
+        listView    = (ListView)view.findViewById(R.id.list_products);
+        score       = (TextView)view.findViewById(R.id.produtcs_score);
+        img         = (ImageView)view.findViewById(R.id.produtcs_image);
+        label       = (TextView)view.findViewById(R.id.produtcs_description);
+
+        makeRequest();
     }
     private void createList(){
         if(productsArrayList == null)

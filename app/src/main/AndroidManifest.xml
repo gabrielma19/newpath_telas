@@ -44,6 +44,8 @@
         <activity android:name=".activity.ChartGraph" />
         <activity android:name=".activity.ResultWheelsOfLife" />
         <activity android:name=".activity.RegisterEmail"></activity>
+        <provider android:authorities="com.facebook.app.FacebookContentProvider509381012756237"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true"/>
     </application>
-
 </manifest>
