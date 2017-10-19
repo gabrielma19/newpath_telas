@@ -19,4 +19,16 @@ os aspectos pessoais abaixo.
  - Diversão
  - Contribuição com o coletivo
  - Espiritualidade
+---
+ ### New Path:
+
+![](https://i.gyazo.com/c11998f77f84cf50728224bcb5190bc0.png)
+![](https://i.gyazo.com/d516c392e68d49bf678efee0649127bb.png)
+![](https://i.gyazo.com/f3d16a059963a0901535893c93b11500.png)
+![](https://i.gyazo.com/2d65757b46c782cfece46ce92c374a6d.png)
+![](https://i.gyazo.com/bcb6af7f926ae9a87c0e1c2bcdfcff70.png)
+![](https://i.gyazo.com/735997b797abe44eb0e4db9e786fab70.png)
+![](https://i.gyazo.com/533f7079b9e7efc5a545a3eb3b89dd83.png)
+![](https://i.gyazo.com/3bd179350c7f4a03463ddd1455514c33.png)
+ 
  
