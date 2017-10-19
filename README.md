@@ -1,6 +1,6 @@
 # New Path
 
-O New Path tem como objetivo melhorar individualmente e coletivamente o bem-estar de nossos usuários. Através da 'Roda da Vida', uma técnica de coaching utilizada ao redor do mundo, conseguimos identificar a área de maior defagem no momento, possibilitando o lançamento de desafios diários para assim nivelar os quesitos correspondentes.
+O New Path tem como objetivo melhorar individualmente e coletivamente o bem-estar de nossos usuários. Através da 'Roda da Vida', uma técnica de coaching utilizada ao redor do mundo, conseguimos identificar a área de maior defasagem no momento, possibilitando o lançamento de desafios diários para assim nivelar os quesitos correspondentes.
 A cada tarefa concluída, o usuário recebe uma pontuação pertinente ao desafio, Através dos pontos é possível oferecer diversos produtos como uma forma de compensação ao esforço realizado. Assim, a tecnologia pode ser usada em prol do bem-estar.
 
 ---
